@@ -247,6 +247,7 @@
     <Content Include="Content\list-css\list.css" />
     <Content Include="Content\list-css\table-style.css" />
     <Content Include="Content\news-css\news.css" />
+    <Content Include="Content\styleMovie.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

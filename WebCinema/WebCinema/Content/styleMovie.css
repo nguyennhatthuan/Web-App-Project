@@ -1,0 +1,42 @@
+  .movies-dates {
+    width: 60%;
+    margin-left: 5%;
+  }
+  .movie-date-selection ul li {
+    display: inline-block;
+    width:20%;
+    text-align:center;
+  }
+  .movie-date-selection ul li.location {
+    width: 100%;
+    text-align:left;
+    margin-bottom:0.8em;
+    font-size:1.2em;
+    font-weight:600;
+  }
+  .movie-date-selection ul {
+    padding: 2em;
+    background-color: #FCFCFC;
+    margin-left: 1.5%;
+    border: 1px solid #eee;
+  }
+  .movie-date-selection ul li a{
+    color: #007DD3;
+  }
+  i.fa.fa-map-marker {
+    font-size: 18px;
+    margin-right: 0.5em;
+    color: #007DD3;
+  }
+  .movie-date-selection ul li.location a{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #000;
+    text-decoration:none;
+  }
+  .movie-date-selection {
+    margin-bottom:1em;
+  }
+  .movie-date-selection ul:hover {
+    background-color: #fff;
+  }

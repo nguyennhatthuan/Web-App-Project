@@ -1,0 +1,6 @@
+﻿@model IEnumerable<WebCinema.Models.Cinema.Movie>
+
+@foreach (var item in Model)
+{
+    <li><img src="~/images/Movies/@item.Poster" alt="" style="width:1300px; height:500px;"><p class='title'>@item.Name</p><p class='description'>@item.Description_</p></li>
+}

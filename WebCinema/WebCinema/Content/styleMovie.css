@@ -1,6 +1,7 @@
   .movies-dates {
-    width: 60%;
-    margin-left: 5%;
+    width: 106.5%;
+    margin-left: -4%;
+    margin-top: 2em;
   }
   .movie-date-selection ul li {
     display: inline-block;
@@ -39,4 +40,86 @@
   }
   .movie-date-selection ul:hover {
     background-color: #fff;
+  }
+  .movies-by-category h5 {
+    color: #003B64;
+    font-size: 1.4em;
+    margin-left: 1.5%;
+    font-weight: 600;
+  }
+  .movies-by-category input.text {
+    padding:5px;
+    width:100%;
+    color:#D7D7D7;
+    margin:1em 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size:0.9em;
+  }
+  .movies-by-category h5 {
+    font-size: 1.3em;
+    margin-left: 0;   
+  }
+  .movies-by-category h5 {
+    font-size: 1.1em;
+  }
+  .movie-booking {
+    padding: 2em;
+    margin-left: 1.5%;
+    border: 1px solid #eee;
+  }
+  .movie-booking {
+    padding: 1em;
+  }
+  .movie-booking {
+    padding: 0.8em;
+    float: left;
+    width: 97%;
+  }
+  .movie-booking {
+    padding: 0.8em;
+    width: 92%;
+    margin-left: 4%;
+  }
+  .movie-ticket-book img {
+    width: 75%;
+  }
+  .movie-ticket-book img {
+    width: 100%;
+  }
+  .movie-ticket-book h4 {
+    color: #000;
+    font-size: 1.2em;
+    margin-top: 1em;
+    font-weight: 600;
+  }
+  .movie-ticket-book p {
+    color: #848484;
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 1.6em;
+  }
+  .movie-ticket-book p {
+    font-size: 0.95em;
+  }
+  .movie-ticket-book img {
+    width: 41%;
+    float: left;
+    margin-right: 5%;
+  }
+  .movie-ticket-book img {
+    width: 60%;
+    margin-right: 0%;
+  }
+  .bahubali-details {
+    float: left;
+    width: 53%;   
+  }
+  .bahubali-details {
+    width: 100%;  
+  }
+  .now-showing-list {
+    margin-top: 0.5em;
+  }
+  .now-showing-list {
+    margin-top: 2em;
   }

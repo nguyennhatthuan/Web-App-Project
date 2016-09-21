@@ -142,6 +142,8 @@ namespace WebCinema.Models.Cinema
             modelBuilder.Entity<Verify>()
                 .Property(e => e.Payment)
                 .HasPrecision(18, 0);
+            modelBuilder.Entity<MovieTypes>()
+                .HasKey(m => new { m.MovieId, m.TypeId });
         }
     }
 }

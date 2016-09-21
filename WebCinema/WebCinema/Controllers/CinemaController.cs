@@ -4,37 +4,56 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebCinema.Models.Cinema;
+using WebCinema.Models.DataAccess;
 
 namespace WebCinema.Controllers
 {
     public class CinemaController : Controller
     {
-        private MovieDbContext db = new MovieDbContext();
-        private List<Movie> GetMovies(int count = 0)
-        {
-            if (count == 0)
-                return db.Movies.ToList();
-            else
-                return db.Movies.OrderByDescending(m => m.CreatedDate).Take(count).ToList();
-        }
 
         public ActionResult _PartialGetGenre()
         {
-            var genre = db.TypeOfMovies.OrderByDescending(g => g.Name).ToList();
+            TypeOfMovieDAO genreDAO = new TypeOfMovieDAO();
+            var genre = genreDAO.GetMovieGenre();
             return PartialView(genre);
         }
         public ActionResult _PartialSlidey()
         {
-            var newMovie = GetMovies(5);
+            MovieDAO movieDAO = new MovieDAO();
+            var newMovie = movieDAO.GetMovies(5);
             return PartialView(newMovie);
         }
 
         public ActionResult _PartialNewMovieBottomSlidey()
         {
-            var movies = GetMovies(9);
+            MovieDAO movieDAO = new MovieDAO();
+            var movies = movieDAO.GetMovies(9);
             return PartialView(movies);
         }
 
+        [HttpGet]
+        public ActionResult _PartialLogin()
+        {
+            return PartialView();
+        }
+        [HttpPost]
+        public ActionResult _PartialLogin(FormCollection col)
+        {
+            var UserName = col["Username"];
+            var Password = col["Password"];
+            UserDAO userDAO = new UserDAO();
+            UserAccount user = userDAO.Login(UserName, Password);
+            if (User!=null)
+            {
+                Session["Account"] = user;
+                return RedirectToAction("Index", "Cinema");
+            }
+            else
+            {
+                //Thông báo
+                return ViewBag.ThongBaoLoi = "Đăng nhập thất bại";
+            }
+        }
         
         // GET: Cinema
         public ActionResult Index()

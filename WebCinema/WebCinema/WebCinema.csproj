@@ -211,6 +211,7 @@
     <Compile Include="Models\Cinema\FeedBack.cs" />
     <Compile Include="Models\Cinema\Movie.cs" />
     <Compile Include="Models\Cinema\MovieDbContext.cs" />
+    <Compile Include="Models\Cinema\MovieTypes.cs" />
     <Compile Include="Models\Cinema\News.cs" />
     <Compile Include="Models\Cinema\RoleGroup.cs" />
     <Compile Include="Models\Cinema\Room.cs" />
@@ -223,8 +224,13 @@
     <Compile Include="Models\Cinema\TypeOfSeat.cs" />
     <Compile Include="Models\Cinema\UserAccount.cs" />
     <Compile Include="Models\Cinema\Verify.cs" />
+    <Compile Include="Models\DataAccess\MovieDAO.cs" />
+    <Compile Include="Models\DataAccess\MovieGenreDAO.cs" />
+    <Compile Include="Models\DataAccess\TypeOfMovieDAO.cs" />
+    <Compile Include="Models\DataAccess\UserDAO.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MovieGenre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -442,6 +448,8 @@
     <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Cinema\_PartialNewMovieBottomSlidey.cshtml" />
     <Content Include="Views\Cinema\_PartialSlidey.cshtml" />
+    <Content Include="Views\Cinema\_PartialLogin.cshtml" />
+    <Content Include="Views\Movie\Genre.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

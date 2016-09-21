@@ -35,7 +35,7 @@ namespace WebCinema.Controllers
             return PartialView(movies);
         }
 
-
+        
         // GET: Cinema
         public ActionResult Index()
         {

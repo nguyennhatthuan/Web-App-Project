@@ -239,6 +239,5 @@ D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Secu
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Google.xml
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Twitter.xml
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb

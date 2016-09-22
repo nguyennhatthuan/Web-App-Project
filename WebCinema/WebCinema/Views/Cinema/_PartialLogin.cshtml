@@ -17,7 +17,7 @@
                             </div>
                             <div class="form">
                                 <h3>Đăng nhập vào tài khoản của bạn</h3>
-                                @using (Html.BeginForm("_PartialLogin", "Cinema",FormMethod.Post))
+                                @using (Html.BeginForm("_PartialLogin", "Cinema", FormMethod.Post))
                                 {
                                     <input type="text" name="Username" placeholder="Tên Đăng Nhập" required="">
                                     <input type="password" name="Password" placeholder="Mật Khẩu" required="">
@@ -26,13 +26,14 @@
                             </div>
                             <div class="form">
                                 <h3>Tạo tài khoản</h3>
-                                <form action="#" method="post">
+                                @using (Html.BeginForm("_PartialRegister", "Cinema", FormMethod.Post))
+                                {
                                     <input type="text" name="Username" placeholder="Username" required="">
                                     <input type="password" name="Password" placeholder="Password" required="">
                                     <input type="email" name="Email" placeholder="Email Address" required="">
                                     <input type="text" name="Phone" placeholder="Phone Number" required="">
                                     <input type="submit" value="Đăng Ký">
-                                </form>
+                                }
                             </div>
                             <div class="cta"><a href="#">Quên mật khẩu? Kệ bạn chứ.</a></div>
                         </div>
@@ -43,15 +44,15 @@
     </div>
 </div>
 <script>
-        $('.toggle').click(function () {
-            // Switches the Icon
-            $(this).children('i').toggleClass('fa-pencil');
-            // Switches the forms
-            $('.form').animate({
-                height: "toggle",
-                'padding-top': 'toggle',
-                'padding-bottom': 'toggle',
-                opacity: "toggle"
-            }, "slow");
-        });
+    $('.toggle').click(function () {
+        // Switches the Icon
+        $(this).children('i').toggleClass('fa-pencil');
+        // Switches the forms
+        $('.form').animate({
+            height: "toggle",
+            'padding-top': 'toggle',
+            'padding-bottom': 'toggle',
+            opacity: "toggle"
+        }, "slow");
+    });
 </script>

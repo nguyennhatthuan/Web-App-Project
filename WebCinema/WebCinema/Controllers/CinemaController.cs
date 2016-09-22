@@ -55,6 +55,26 @@ namespace WebCinema.Controllers
             }
         }
         
+        [HttpPost]
+        public ActionResult _PartialRegister(FormCollection col)
+        {
+            var UserName = col["Username"];
+            var Password = col["Password"];
+            var Email = col["Email"];
+            var Phone = col["Phone"];
+            UserDAO userDAO = new UserDAO();
+            int Result = userDAO.Register(UserName, Password, Email, Phone);
+            if(Result==1)
+            {
+                ViewBag.ThongBao = "Đăng ký thành công";
+                return RedirectToAction("Index", "Cinema");
+            }
+            else
+            {
+                ViewBag.ThongBao = "Tài khoản đã có người sử dụng";
+                return RedirectToAction("_PartialLogin", "Cinema");
+            }
+        }
         // GET: Cinema
         public ActionResult Index()
         {

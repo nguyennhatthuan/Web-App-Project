@@ -453,7 +453,8 @@
     <Content Include="Views\Movie\Genre.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\News\Read.cshtml" />
-    <Content Include="Views\News\ShowNews.cshtml" />
+    <Content Include="Views\News\_PartialShowNews.cshtml" />
+    <Content Include="Views\News\_PartialTopNews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

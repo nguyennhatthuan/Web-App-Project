@@ -1,0 +1,20 @@
+﻿@model IEnumerable<WebCinema.Models.Cinema.News>
+
+<div class="news-right-bottom-bg">
+    <div class="news-grids-bottom">
+        @foreach (var item in Model)
+        {
+            <div class="top-news-grid">
+                <div class="top-news-grid-heading">
+                    <a href="news-single.html">@item.Title</a>
+                </div>
+                <div class="w3ls-news-t-grid top-t-grid">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-clock-o"></i> 1h</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i> Vivamus nibh</a></li>
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+</div>

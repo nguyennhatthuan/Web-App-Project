@@ -11,11 +11,24 @@ namespace WebCinema.Controllers
     public class NewsController : Controller
     {
         MovieDbContext db = new MovieDbContext();
-        public ActionResult ShowNews(int count)
+        public ActionResult _PartialShowNews()
         {
-            var news = from n in db.News select n;
-            return PartialView(news);
+            var News = db.News.OrderByDescending(p => p.CreatedDate).Take(8).ToList();
+            return PartialView(News);
         }
+
+        public ActionResult _PartialTopNews()
+        {
+            var News = db.News.OrderByDescending(p => p.CreatedDate).Take(6).ToList();
+            return PartialView(News);
+        }
+
+        // 2 Action trên là 2 Partial tách ra để gắn vào trang Index, ShowNews dùng để hiện các tin tức của Lastest News
+        // TopNews là Partial để hiện cái khung bên phải
+        // Ngoài ra còn thẻ Movie News nữa, chưa chỉnh, cái đó từ từ :))
+        // Chú làm cái Read là OK :v
+
+
         // GET: News
         public ActionResult Index()
         {

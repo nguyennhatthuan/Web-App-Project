@@ -9,7 +9,7 @@
                 <a href="news-single.html"><img src="~/images/m1.jpg" alt="" /></a>
             </div>
             <div class="col-sm-7 wthree-news-info">
-                <h5><a href="news-single.html">@item.Title</a></h5>
+                <h5><a href="@Url.Action("Read","News", new { id = item.NewsId})">@item.Title</a></h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi blanditiis, sint nisi ex, quidem voluptate temporibus tempora quos obcaecati repellendus nihil ipsum quisquam impedit debitis quis voluptatem veritatis, fugit saepe.</p>
                 <ul>
                     <li><i class="fa fa-clock-o" aria-hidden="true"></i>@item.CreatedDate</li>

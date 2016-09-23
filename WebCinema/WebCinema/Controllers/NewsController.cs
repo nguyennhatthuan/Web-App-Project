@@ -35,9 +35,10 @@ namespace WebCinema.Controllers
             return View();
         }
 
-        public ActionResult Read()
+        public ActionResult Read(int id)
         {
-            return View();
+            var News = db.News.SingleOrDefault(p => p.NewsId == id);
+            return View(News);
         }
     }
 }

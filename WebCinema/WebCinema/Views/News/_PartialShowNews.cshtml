@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WebCinema.Models.Cinema.News>
+
+
+@foreach (var item in Model)
+{
+    <div class="wthree-news-top-left">
+        <div class="col-md-12 w3-agileits-news-left">
+            <div class="col-sm-5 wthree-news-img">
+                <a href="news-single.html"><img src="~/images/m1.jpg" alt="" /></a>
+            </div>
+            <div class="col-sm-7 wthree-news-info">
+                <h5><a href="news-single.html">@item.Title</a></h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi blanditiis, sint nisi ex, quidem voluptate temporibus tempora quos obcaecati repellendus nihil ipsum quisquam impedit debitis quis voluptatem veritatis, fugit saepe.</p>
+                <ul>
+                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>@item.CreatedDate</li>
+                    <li><i class="fa fa-eye" aria-hidden="true"></i>2642 lượt View</li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+}

@@ -242,3 +242,4 @@ D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Secu
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache
+D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache

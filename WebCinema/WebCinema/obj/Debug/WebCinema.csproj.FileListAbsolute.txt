@@ -79,87 +79,6 @@ D:\Study\Visual Studio\ASP.NET\WebCinema\WebCinema\bin\Microsoft.Owin.Security.T
 D:\Study\Visual Studio\ASP.NET\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Study\Visual Studio\ASP.NET\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\Study\Visual Studio\ASP.NET\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\ApplicationInsights.config
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\csc.exe
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\System.Collections.Immutable.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\System.Reflection.Metadata.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\vbc.exe
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\VBCSCompiler.exe
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\VBCSCompiler.exe.config
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll.config
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Antlr3.Runtime.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.SqlServer.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.Agent.Intercept.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.DependencyCollector.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.PerfCounterCollector.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.ServerTelemetryChannel.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.Web.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.WindowsServer.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.ApplicationInsights.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Core.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Cookies.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Facebook.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Google.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.OAuth.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Twitter.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Web.Infrastructure.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Newtonsoft.Json.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Owin.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Helpers.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Mvc.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Optimization.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Razor.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Deployment.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Razor.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebGrease.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.DependencyCollector.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.ServerTelemetryChannel.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.Web.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.WindowsServer.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.ApplicationInsights.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Helpers.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Mvc.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Optimization.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Razor.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Deployment.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Razor.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Antlr3.Runtime.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Newtonsoft.Json.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.SqlServer.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Core.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Facebook.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Cookies.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.OAuth.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Google.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Twitter.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\ApplicationInsights.config
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\roslyn\csc.exe
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -241,5 +160,4 @@ D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Secu
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache

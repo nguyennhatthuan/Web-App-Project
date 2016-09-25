@@ -7,12 +7,12 @@
             <div class="col-sm-5 wthree-news-img">
                 <a href="news-single.html"><img src="~/images/m1.jpg" alt="" /></a>
             </div>
-            
+
             <div class="col-sm-7 wthree-news-info">
-                <h5><a href="@Url.Action("Read","News", new { id = item.NewsId})">@item.Title</a></h5>               
-                    @{   
-                        string[] strCut = item.Content.Split('.');
-                    }
+                <h5><a href="@Url.Action("Read","News", new { id = item.NewsId})">@item.Title</a></h5>
+                @{
+                    string[] strCut = item.Content.Split('.');
+                }
                 <p>@strCut[0] .</p>
                 <ul>
                     <li><i class="fa fa-clock-o" aria-hidden="true"></i>@item.CreatedDate</li>
@@ -23,4 +23,4 @@
         </div>
         <div class="clearfix"> </div>
     </div>
-}
+                    }

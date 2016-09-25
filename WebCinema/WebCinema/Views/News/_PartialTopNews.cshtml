@@ -6,7 +6,7 @@
         {
             <div class="top-news-grid">
                 <div class="top-news-grid-heading">
-                    <a href="news-single.html">@item.Title</a>
+                    <a href="@Url.Action("Read","News", new { id = item.NewsId})">@item.Title</a>
                 </div>
                 <div class="w3ls-news-t-grid top-t-grid">
                     <ul>

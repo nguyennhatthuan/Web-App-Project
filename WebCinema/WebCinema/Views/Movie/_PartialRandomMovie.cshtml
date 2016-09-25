@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebCinema.Models.Cinema.Movie>
+
+<div class="browse-inner-come-agile-w3">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-2 w3l-movie-gride-agile">
+            <a href="single.html" class="hvr-shutter-out-horizontal">
+                <img src="~/images/Movies/@item.Poster" title="album-name" alt=" " style="width:128px; height:268px;" />
+                <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+            </a>
+            <div class="mid-1">
+                <div class="w3l-movie-text">
+                    <h6><a href="single.html">@item.Name</a></h6>
+                </div>
+                <div class="mid-2">
+
+                    <p>@item.ReleaseDate</p>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+            <div class="ribben two">
+                <p>NEW</p>
+            </div>
+        </div>
+    }
+    <div class="clearfix"> </div>
+</div>

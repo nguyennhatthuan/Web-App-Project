@@ -21,5 +21,10 @@ namespace WebCinema.Models.DataAccess
         {
             return db.Movies.SingleOrDefault(p => p.MovieId == Id);
         } 
+
+        public List<Movie> GetRandomMovies(int count=0)
+        {
+            return db.Movies.GetRandomItems(count).ToList();
+        }
     }
 }

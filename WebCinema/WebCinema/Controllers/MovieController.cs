@@ -24,5 +24,12 @@ namespace WebCinema.Controllers
             List<MovieGenre> Movies = genre.GetMovieByGenre(Id);
             return View(Movies);
         }
+
+        public ActionResult _PartialRandomMovie()
+        {
+            MovieDAO movieDAO = new MovieDAO();
+            var newMovie = movieDAO.GetRandomMovies(6);
+            return PartialView(newMovie);
+        }
     }
 }

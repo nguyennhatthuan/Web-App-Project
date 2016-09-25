@@ -232,6 +232,7 @@
     <Compile Include="Models\Cinema\Verify.cs" />
     <Compile Include="Models\DataAccess\MovieDAO.cs" />
     <Compile Include="Models\DataAccess\MovieGenreDAO.cs" />
+    <Compile Include="Models\DataAccess\MyExtensions.cs" />
     <Compile Include="Models\DataAccess\TypeOfMovieDAO.cs" />
     <Compile Include="Models\DataAccess\UserDAO.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -465,6 +466,7 @@
     <Content Include="Views\News\Read.cshtml" />
     <Content Include="Views\News\_PartialShowNews.cshtml" />
     <Content Include="Views\News\_PartialTopNews.cshtml" />
+    <Content Include="Views\Movie\_PartialRandomMovie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

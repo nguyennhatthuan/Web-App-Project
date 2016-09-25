@@ -24,16 +24,28 @@ namespace WebCinema.Areas.Admin.Controllers
             var Password = col["Password"];
             StaffDAO staffDAO = new StaffDAO();
             Staff user = staffDAO.Login(UserName, Password);
-            if (User != null)
+            if (String.IsNullOrEmpty(UserName))
             {
-                Session["Account"] = user;
-                return RedirectToAction("Index", "Admin");
+                ViewData["Loi1"] = "Phải nhập tên đăng nhập";
+            }
+            else if (String.IsNullOrEmpty(Password))
+            {
+                ViewData["Loi2"] = "Phải nhập mật khẩu";
             }
             else
             {
-                //Thông báo
-                return ViewBag.ThongBaoLoi = "Đăng nhập thất bại";
+                if (User != null)
+                {
+                    Session["Account"] = user;
+                    return RedirectToAction("Index", "Admin");
+                }
+                else
+                {
+                    //Thông báo
+                    return ViewBag.ThongBaoLoi = "Đăng nhập thất bại";
+                }
             }
+            return View();       
         }
     }
 }

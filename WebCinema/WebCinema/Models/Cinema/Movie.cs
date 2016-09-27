@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -22,13 +22,18 @@ namespace WebCinema.Models.Cinema
 
         [Required]
         [StringLength(50)]
+        [Display(Name="Tên phim")]
+        
         public string Name { get; set; }
 
+        [Display(Name="Độ dài")]
         public int? Length_ { get; set; }
 
+        [Display(Name = "Đạo diễn")]
         [StringLength(50)]
         public string Director { get; set; }
 
+        [Display(Name = "Diễn viên")]
         [StringLength(100)]
         public string Stars { get; set; }
 

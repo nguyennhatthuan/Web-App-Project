@@ -38,12 +38,15 @@
         public string Stars { get; set; }
 
         [Column(TypeName = "ntext")]
+        [Display(Name = "Mô tả")]
         public string Description_ { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày chiếu")]
         public DateTime? ReleaseDate { get; set; }
 
         [StringLength(5)]
+        [Display(Name = "Dạng phim")]
         public string Format_ { get; set; }
 
         [StringLength(100)]
@@ -53,21 +56,27 @@
         public string Poster { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Ảnh nhỏ")]
         public string Thumbnail { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Ngôn ngữ")]
         public string Language_ { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày tạo")]
         public DateTime? CreatedDate { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Người tạo")]
         public string CreatedBy { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày chỉnh sửa")]
         public DateTime? ModifiedDate { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Người sửa")]
         public string ModifiedBy { get; set; }
 
         [StringLength(250)]
@@ -76,6 +85,7 @@
         [StringLength(250)]
         public string MetaDescription { get; set; }
 
+        [Display(Name = "Trạng thái")]
         public bool? Status_ { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

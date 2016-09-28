@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -15,10 +15,12 @@ namespace WebCinema.Models.Cinema
         }
 
         [Key]
+        [Display(Name = "Mã loại tin tức")]
         public int TypeId { get; set; }
 
         [Required]
         [StringLength(30)]
+        [Display(Name = "Tên loại tin tức")]
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -14,20 +14,26 @@ namespace WebCinema.Models.Cinema
         {
             Verifies = new HashSet<Verify>();
         }
-
+        [Display(Name = "Mã vé")]
         public int TicketId { get; set; }
 
+        [Display(Name = "Mã người dùng")]
         public int? UserId { get; set; }
 
         [StringLength(5)]
+        [Display(Name = "Mã ghế")]
         public string SeatId { get; set; }
 
+        [Display(Name = "Mã suất chiếu")]
         public int? ShowTimeId { get; set; }
 
+        [Display(Name = "Ngày đặt vé")]
         public DateTime? BookingDate { get; set; }
 
+        [Display(Name = "Tình trạng")]
         public bool? Status_ { get; set; }
 
+        [Display(Name = "Tổng tiền")]
         public decimal? TotalPrice { get; set; }
 
         public virtual Seat Seat { get; set; }

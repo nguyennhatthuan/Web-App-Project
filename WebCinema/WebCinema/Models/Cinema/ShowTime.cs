@@ -27,6 +27,7 @@
         [Display(Name = "Giờ bắt đầu")]
         public TimeSpan? StartTime { get; set; }
 
+        [Display(Name ="Ngày chiếu")]
         public DateTime? Date { get; set; }
 
         public virtual Movie Movie { get; set; }

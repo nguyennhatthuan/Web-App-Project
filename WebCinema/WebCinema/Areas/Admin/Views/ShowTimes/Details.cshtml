@@ -1,0 +1,59 @@
+﻿@model WebCinema.Models.Cinema.ShowTime
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Chi tiết</h1>
+        </div>
+        <div>
+            <h4>ShowTime</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Movie.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Movie.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Room.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Room.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.StartTime)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.StartTime)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Date)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Date)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ShowTimeId }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>

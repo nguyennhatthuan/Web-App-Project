@@ -242,4 +242,10 @@ D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.Systems.HtmlAgilityPack.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\HtmlAgilityPack.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.xml
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.Systems.HtmlAgilityPack.xml
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\HtmlAgilityPack.pdb
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\HtmlAgilityPack.xml

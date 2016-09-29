@@ -34,7 +34,7 @@ namespace WebCinema.Areas.Admin.Controllers
             }
             else
             {
-                if (User != null)
+                if (user != null)
                 {
                     Session["Account"] = user;
                     return RedirectToAction("Index", "Admin");
@@ -42,7 +42,7 @@ namespace WebCinema.Areas.Admin.Controllers
                 else
                 {
                     //Thông báo
-                    return ViewBag.ThongBaoLoi = "Đăng nhập thất bại";
+                    ViewBag.ThongBaoLoi = "Đăng nhập thất bại";
                 }
             }
             return View();       

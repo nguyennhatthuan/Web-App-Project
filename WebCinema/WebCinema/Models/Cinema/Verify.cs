@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -12,15 +12,19 @@ namespace WebCinema.Models.Cinema
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name = "Mã vé")]
         public int TicketId { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name = "Mã nhân viên")]
         public int StaffId { get; set; }
 
+        [Display(Name = "Số tiền trả")]
         public decimal? Payment { get; set; }
 
+        [Display(Name = "Ngày trả")]
         public DateTime? PaymentDate { get; set; }
 
         public virtual Staff Staff { get; set; }

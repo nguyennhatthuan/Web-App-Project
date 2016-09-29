@@ -15,10 +15,12 @@ namespace WebCinema.Models.Cinema
             ShowTimes = new HashSet<ShowTime>();
         }
 
+        [Display(Name = "Mã phòng")]
         public int RoomId { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Tên phòng")]
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

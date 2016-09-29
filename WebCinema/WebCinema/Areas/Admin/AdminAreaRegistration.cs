@@ -17,7 +17,7 @@ namespace WebCinema.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Login", Controller = "Login", id = UrlParameter.Optional }
+                new { action = "Index", Controller = "Login", id = UrlParameter.Optional }
             );
         }
     }

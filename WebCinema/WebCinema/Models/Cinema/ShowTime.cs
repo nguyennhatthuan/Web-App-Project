@@ -27,6 +27,8 @@
         [Display(Name = "Giờ bắt đầu")]
         public TimeSpan? StartTime { get; set; }
 
+        public DateTime? Date { get; set; }
+
         public virtual Movie Movie { get; set; }
 
         public virtual Room Room { get; set; }

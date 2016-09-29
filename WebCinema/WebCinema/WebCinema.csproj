@@ -44,6 +44,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Fizzler, Version=0.1.15619.0, Culture=neutral, PublicKeyToken=4ebff4844e382110, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fizzler.1.0.0\lib\net35\Fizzler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fizzler.Systems.HtmlAgilityPack, Version=0.1.15619.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fizzler.Systems.HtmlAgilityPack.1.0.0\lib\net35\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -211,6 +223,7 @@
     <Compile Include="Areas\Admin\Controllers\VerifiesController.cs" />
     <Compile Include="Areas\Admin\Models\StaffDAO.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\CinemaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -691,6 +704,14 @@
     <Content Include="Areas\Admin\Content\dist\js\sb-admin-2.js" />
     <Content Include="Areas\Admin\Content\js\flot-data.js" />
     <Content Include="Areas\Admin\Content\js\morris-data.js" />
+    <Content Include="Content\Booking\css\jquery.seat-charts.css" />
+    <Content Include="Content\Booking\css\style.css" />
+    <Content Include="Content\Booking\images\banner2.jpg" />
+    <Content Include="Content\Booking\js\jquery-1.11.0.min.js" />
+    <Content Include="Content\Booking\js\jquery.nicescroll.js" />
+    <Content Include="Content\Booking\js\jquery.seat-charts.js" />
+    <Content Include="Content\Booking\js\jquery.seat-charts.min.js" />
+    <Content Include="Content\Booking\js\scripts.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap.css" />
@@ -1277,6 +1298,7 @@
     <Content Include="Views\News\_PartialShowNews.cshtml" />
     <Content Include="Views\News\_PartialTopNews.cshtml" />
     <Content Include="Views\Movie\_PartialRandomMovie.cshtml" />
+    <Content Include="Views\Booking\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

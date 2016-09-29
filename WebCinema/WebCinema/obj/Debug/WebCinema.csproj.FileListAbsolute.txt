@@ -241,3 +241,4 @@ D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
+D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache

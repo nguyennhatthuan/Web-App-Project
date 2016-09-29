@@ -145,5 +145,7 @@ namespace WebCinema.Models.Cinema
             modelBuilder.Entity<MovieTypes>()
                 .HasKey(m => new { m.MovieId, m.TypeId });
         }
+
+        public System.Data.Entity.DbSet<WebCinema.Models.Cinema.MovieTypes> MovieTypes { get; set; }
     }
 }

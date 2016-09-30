@@ -1,4 +1,4 @@
-﻿
+﻿@using WebCinema.Models.DataAccess;
 @{
     Layout = null;
 }
@@ -21,12 +21,12 @@
 </head>
 <body>
     <div class="content">
-        <h1>Movie Ticket Booking Widget</h1>
+        <h1>@ViewBag.MovieName</h1>
         <div class="main">
-            <h2>Multiplex Theatre Showing Screen 1</h2>
+            <h2>@ViewBag.Room</h2>
             <div class="demo">
                 <div id="seat-map">
-                    <div class="front">SCREEN</div>
+                    <div class="front">Màn Hình</div>
                 </div>
                 <div class="booking-details">
                     <ul class="book-left">
@@ -37,8 +37,8 @@
                         <li>Ghế :</li>
                     </ul>
                     <ul class="book-right">
-                        <li>: Gingerclown</li>
-                        <li>: April 3, 21:00</li>
+                        <li>: @ViewBag.MovieName</li>
+                        <li>: @ViewBag.Time</li>
                         <li>: <span id="counter">0</span></li>
                         <li>: <b><i>$</i><span id="total">0</span></b></li>
                     </ul>
@@ -87,7 +87,7 @@
 						},
 						click: function () { //Click event
 							if (this.status() == 'available') { //optional seat
-								$('<li>Row'+(this.settings.row+1)+' Seat'+this.settings.label+'</li>')
+								$('<li>Hàng '+(this.settings.row+1)+' Ghế '+this.settings.label+'</li>')
 									.attr('id', 'cart-item-'+this.settings.id)
 									.data('seatId', this.settings.id)
 									.appendTo($cart);
@@ -114,7 +114,7 @@
 						}
 					});
 				    //sold seat
-					var BookedSeats = new Array();
+                    var BookedSeats = @MyExtensions.SerializeObject(ViewBag.Book);
                     // chỉnh ghế đã bán
                     sc.get(BookedSeats).status('unavailable');
                     // chỉnh ghế đã bán

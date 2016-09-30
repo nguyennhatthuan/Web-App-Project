@@ -8,6 +8,7 @@ using HtmlAgilityPack;
 using Fizzler;
 using Fizzler.Systems.HtmlAgilityPack;
 using System.Text;
+using System.Web.Script.Serialization;
 
 namespace WebCinema.Controllers
 {
@@ -18,37 +19,29 @@ namespace WebCinema.Controllers
         public ActionResult Index(string STId)
         {
             var ShowTimeId = int.Parse(STId);
+            var Show = db.ShowTimes.SingleOrDefault(s => s.ShowTimeId == ShowTimeId);
+            var MovieName = db.Movies.SingleOrDefault(s => s.ShowTimes.Any(p => p.ShowTimeId == ShowTimeId)).Name;
+            var Room = db.Rooms.SingleOrDefault(r => r.ShowTimes.Any(p => p.ShowTimeId == ShowTimeId)).Name;
             var BookedSeat = db.Tickets.Where(s => s.ShowTimeId == ShowTimeId).ToList();
-            string[] Book = new string[BookedSeat.Count];
-            for (int i = 0; i < BookedSeat.Count; i++)
+            ViewBag.MovieName = MovieName;
+            ViewBag.Room = Room;
+            var Time = Show.StartTime.Value.Hours.ToString() + ":" + Show.StartTime.Value.Minutes.ToString() + ", " + Show.Date.Value.Date.ToString("dd/MM/yyyy");
+            ViewBag.Time = Time;
+            if (BookedSeat.Count > 0)
             {
-                Book[i] = BookedSeat.ElementAt(i).SeatId.ToString();
+                string[] Book = new string[BookedSeat.Count];
+                for (int i = 0; i < BookedSeat.Count; i++)
+                {
+                    Book[i] = BookedSeat.ElementAt(i).SeatId.ToString();
+                }
+                ViewBag.Book = Book;
             }
-            ViewBag.BS = Book;
             return View();
         }
 
         [HttpPost]
         public ActionResult Index()
         {
-            //HtmlWeb htmlWeb = new HtmlWeb()
-            //{
-            //    AutoDetectEncoding = false,
-            //    OverrideEncoding = Encoding.UTF8  //Set UTF8 để hiển thị tiếng Việt
-            //};
-            //HtmlDocument document = htmlWeb.Load("http://www.webtretho.com/forum/f26/");
-
-            //var threadItems = document.DocumentNode.QuerySelectorAll("ul#threads > li").ToList();
-            //List<Object> objs = new List<object>();
-            //foreach (var item in threadItems)
-            //{
-            //    var linkNode = item.QuerySelector("a.title");
-            //    var link = linkNode.Attributes["href"].Value;
-            //    var text = linkNode.InnerText;
-            //    var readCount = item.QuerySelector("div.folTypPost > ul > li > b").InnerText;
-
-            //    objs.Add(new { link, text, readCount });
-            //}
             return View();
         }
     }

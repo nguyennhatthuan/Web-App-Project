@@ -44,6 +44,10 @@ namespace WebCinema.Controllers
         [HttpPost]
         public ActionResult Index()
         {
+            //Send to Thuấn in the future, To do:
+            //khi chọn các ghế bên Javascript, lưu các ghế đã chọn vào 1 mảng, chứa trong đó
+            //sau đó dùng Json chuyển về lại cho C# nhận ra các ghế đã chọn.
+
             return View();
         }
     }

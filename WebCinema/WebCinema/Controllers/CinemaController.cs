@@ -30,7 +30,7 @@ namespace WebCinema.Controllers
             var movies = movieDAO.GetMovies(9);
             return PartialView(movies);
         }
-
+        // Viết tạm cái Login, chưa thêm View xem thông tin User
         [HttpGet]
         public ActionResult _PartialLogin()
         {

@@ -89,6 +89,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
@@ -723,7 +731,11 @@
     <Content Include="bin\EntityFramework.xml" />
     <Content Include="bin\Fizzler.dll" />
     <Content Include="bin\Fizzler.Systems.HtmlAgilityPack.dll" />
+    <Content Include="bin\Fizzler.Systems.HtmlAgilityPack.xml" />
+    <Content Include="bin\Fizzler.xml" />
     <Content Include="bin\HtmlAgilityPack.dll" />
+    <Content Include="bin\HtmlAgilityPack.pdb" />
+    <Content Include="bin\HtmlAgilityPack.xml" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
@@ -818,6 +830,7 @@
     <Content Include="Content\list-css\list.css" />
     <Content Include="Content\list-css\table-style.css" />
     <Content Include="Content\news-css\news.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\styleMovie.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -935,6 +948,10 @@
     <Content Include="images\news1.jpg" />
     <Content Include="images\play-button.png" />
     <Content Include="images\user.jpg" />
+    <Content Include="obj\Debug\TempPE\Areas.Admin.Models.AdminCinema.dbAdminCinema.designer.cs.dll" />
+    <Content Include="obj\Debug\WebCinema.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\WebCinema.dll" />
+    <Content Include="obj\Debug\WebCinema.pdb" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1359,6 +1376,7 @@
     <Content Include="Areas\Admin\Views\Advertisings\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Advertisings\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Advertisings\Index.cshtml" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

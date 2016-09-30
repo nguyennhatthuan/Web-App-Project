@@ -95,69 +95,6 @@ D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\roslyn\VBCSCompiler
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll.config
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.pdb
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Antlr3.Runtime.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.SqlServer.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.Agent.Intercept.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.DependencyCollector.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.PerfCounterCollector.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.ServerTelemetryChannel.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.Web.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.WindowsServer.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.ApplicationInsights.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Core.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Cookies.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Facebook.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Google.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.OAuth.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Twitter.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Web.Infrastructure.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Newtonsoft.Json.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Owin.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Helpers.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Mvc.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Optimization.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Razor.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Deployment.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Razor.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\WebGrease.dll
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.DependencyCollector.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.ServerTelemetryChannel.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.Web.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.WindowsServer.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.ApplicationInsights.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Helpers.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Mvc.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Optimization.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Razor.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Deployment.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Razor.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Antlr3.Runtime.pdb
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Newtonsoft.Json.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.SqlServer.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Core.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Facebook.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Cookies.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.OAuth.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Google.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Twitter.xml
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\ApplicationInsights.config
@@ -241,7 +178,6 @@ D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
-D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.Systems.HtmlAgilityPack.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\HtmlAgilityPack.dll
@@ -249,3 +185,7 @@ D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.xml
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.Systems.HtmlAgilityPack.xml
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\HtmlAgilityPack.pdb
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\HtmlAgilityPack.xml
+D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\PagedList.dll
+D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.dll
+D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\PagedList.xml
+D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.xml

@@ -23,6 +23,8 @@ namespace WebCinema.Controllers
             var MovieName = db.Movies.SingleOrDefault(s => s.ShowTimes.Any(p => p.ShowTimeId == ShowTimeId)).Name;
             var Room = db.Rooms.SingleOrDefault(r => r.ShowTimes.Any(p => p.ShowTimeId == ShowTimeId)).Name;
             var BookedSeat = db.Tickets.Where(s => s.ShowTimeId == ShowTimeId).ToList();
+            var TicketPrice = db.TypeOfSeats.SingleOrDefault(t => t.TypeId == 2).Price;
+            ViewBag.TicketPrice = TicketPrice;
             ViewBag.MovieName = MovieName;
             ViewBag.Room = Room;
             var Time = Show.StartTime.Value.Hours.ToString() + ":" + Show.StartTime.Value.Minutes.ToString() + ", " + Show.Date.Value.Date.ToString("dd/MM/yyyy");

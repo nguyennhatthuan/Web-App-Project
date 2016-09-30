@@ -21,11 +21,9 @@ namespace WebCinema.Models.DataAccess
             {
                 var serializer = new JsonSerializer
                 {
-                    // Let's use camelCasing as is common practice in JavaScript
                     ContractResolver = new CamelCasePropertyNamesContractResolver()
                 };
 
-                // We don't want quotes around object names
                 jsonWriter.QuoteName = false;
                 serializer.Serialize(jsonWriter, value);
 

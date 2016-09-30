@@ -113,41 +113,8 @@ D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\VBCSCompiler.exe
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll.config
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.DependencyCollector.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.ServerTelemetryChannel.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.Web.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AI.WindowsServer.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.ApplicationInsights.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Helpers.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Mvc.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Optimization.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.Razor.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Deployment.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\System.Web.WebPages.Razor.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Antlr3.Runtime.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Newtonsoft.Json.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\EntityFramework.SqlServer.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Core.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Facebook.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Cookies.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.OAuth.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Google.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.Twitter.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\Fizzler.Systems.HtmlAgilityPack.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\HtmlAgilityPack.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\HtmlAgilityPack.xml
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\PagedList.dll
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.dll
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\PagedList.xml
@@ -156,4 +123,3 @@ D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.xml
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache

@@ -15,7 +15,7 @@
                 <h1 class="page-header">Chỉnh sửa</h1>
             </div>
             <div class="form-horizontal">
-                <h4>RoleGroup</h4>
+                <h4>Nhóm quyền</h4>
                 <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 @Html.HiddenFor(model => model.RGId)
@@ -70,7 +70,7 @@
 
     }
     <div>
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Trở về danh sách", "Index")
     </div>
     <!-- /.row -->
 </div>

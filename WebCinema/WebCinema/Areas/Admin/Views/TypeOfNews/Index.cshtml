@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Type of news</h1>
+        <h1 class="page-header">Loại tin tức</h1>
         <p>
             @Html.ActionLink("Tạo mới", "Create")
         </p>
@@ -43,9 +43,9 @@
                                                 @Html.DisplayFor(modelItem => item.Name)
                                             </td>
                                             <td>
-                                                @Html.ActionLink("Edit", "Edit", new { id = item.TypeId }) |
-                                                @Html.ActionLink("Details", "Details", new { id = item.TypeId }) |
-                                                @Html.ActionLink("Delete", "Delete", new { id = item.TypeId })
+                                                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.TypeId }) |
+                                                @Html.ActionLink("Chi tiết", "Details", new { id = item.TypeId }) |
+                                                @Html.ActionLink("Xóa", "Delete", new { id = item.TypeId })
                                             </td>
                                         </tr>
                                     }

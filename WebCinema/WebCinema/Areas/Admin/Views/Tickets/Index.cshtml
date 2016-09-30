@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Ticket</h1>
+        <h1 class="page-header">Vé</h1>
         <p>
             @Html.ActionLink("Tạo mới", "Create")
         </p>
@@ -72,9 +72,9 @@
                                                 @Html.DisplayFor(modelItem => item.TotalPrice)
                                             </td>
                                             <td>
-                                                @Html.ActionLink("Edit", "Edit", new { id = item.TicketId }) |
-                                                @Html.ActionLink("Details", "Details", new { id = item.TicketId }) |
-                                                @Html.ActionLink("Delete", "Delete", new { id = item.TicketId })
+                                                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.TicketId }) |
+                                                @Html.ActionLink("chi tiết", "Details", new { id = item.TicketId }) |
+                                                @Html.ActionLink("Xóa", "Delete", new { id = item.TicketId })
                                             </td>
                                         </tr>
                                     }

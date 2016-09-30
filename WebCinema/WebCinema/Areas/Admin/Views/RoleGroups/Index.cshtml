@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Role Group</h1>
+        <h1 class="page-header">Nhóm quyền</h1>
         <p>
             @Html.ActionLink("Tạo mới", "Create")
         </p>
@@ -61,9 +61,9 @@
                                             @Html.DisplayFor(modelItem => item.Delete_)
                                         </td>
                                         <td>
-                                            @Html.ActionLink("Edit", "Edit", new { id = item.RGId }) |
-                                            @Html.ActionLink("Details", "Details", new { id = item.RGId }) |
-                                            @Html.ActionLink("Delete", "Delete", new { id = item.RGId })
+                                            @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.RGId }) |
+                                            @Html.ActionLink("Chi tiết", "Details", new { id = item.RGId }) |
+                                            @Html.ActionLink("Xóa", "Delete", new { id = item.RGId })
                                         </td>
                                     </tr>
                                     }

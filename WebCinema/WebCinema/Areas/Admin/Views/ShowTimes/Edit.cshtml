@@ -14,7 +14,7 @@
                 <h1 class="page-header">Chỉnh sửa</h1>
             </div>
             <div class="form-horizontal">
-                <h4>ShowTime</h4>
+                <h4>Suất chiếu</h4>
                 <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 @Html.HiddenFor(model => model.ShowTimeId)
@@ -63,7 +63,7 @@
 
     }
     <div>
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Trở về danh sách", "Index")
     </div>
     <!-- /.row -->
 </div>

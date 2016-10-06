@@ -13,7 +13,7 @@ namespace WebCinema.Models.DataAccess
         private List<Movie> GetMovieTypes(int Id)
         {
             //return db.MovieTypes.Where(p => p.TypeId == Id).ToList();
-            return db.Movies.Where(m => m.TypeOfMovies.Any(l => l.TypeId == Id)).ToList();
+            return db.Movies.Where(m => m.MovieTypes.Any(l=>l.TypeId==Id)).ToList();
         }
 
         public List<MovieGenre> GetMovieByGenre(int Id)

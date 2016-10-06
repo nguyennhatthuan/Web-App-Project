@@ -231,12 +231,10 @@
     <Compile Include="Areas\Admin\Controllers\SeatsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ShowTimesController.cs" />
     <Compile Include="Areas\Admin\Controllers\StaffsController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TicketsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TypeOfMoviesController.cs" />
     <Compile Include="Areas\Admin\Controllers\TypeOfNewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TypeOfSeatsController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserAccountsController.cs" />
-    <Compile Include="Areas\Admin\Controllers\VerifiesController.cs" />
     <Compile Include="Areas\Admin\Models\StaffDAO.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
@@ -249,6 +247,25 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Cinema\Advertising.cs" />
+    <Compile Include="Models\Cinema\Bill.cs" />
+    <Compile Include="Models\Cinema\BillDetail.cs" />
+    <Compile Include="Models\Cinema\Comment.cs" />
+    <Compile Include="Models\Cinema\FeedBack.cs" />
+    <Compile Include="Models\Cinema\Movie.cs" />
+    <Compile Include="Models\Cinema\MovieDbContext.cs" />
+    <Compile Include="Models\Cinema\MovieType.cs" />
+    <Compile Include="Models\Cinema\News.cs" />
+    <Compile Include="Models\Cinema\RoleGroup.cs" />
+    <Compile Include="Models\Cinema\Room.cs" />
+    <Compile Include="Models\Cinema\Seat.cs" />
+    <Compile Include="Models\Cinema\ShowTime.cs" />
+    <Compile Include="Models\Cinema\Staff.cs" />
+    <Compile Include="Models\Cinema\Ticket.cs" />
+    <Compile Include="Models\Cinema\TypeOfMovie.cs" />
+    <Compile Include="Models\Cinema\TypeOfNew.cs" />
+    <Compile Include="Models\Cinema\TypeOfSeat.cs" />
+    <Compile Include="Models\Cinema\UserAccount.cs" />
     <Compile Include="Models\DataAccess\MovieDAO.cs" />
     <Compile Include="Models\DataAccess\MovieGenreDAO.cs" />
     <Compile Include="Models\DataAccess\MyExtensions.cs" />
@@ -1308,11 +1325,6 @@
     <Content Include="Areas\Admin\Views\TypeOfNews\Details.cshtml" />
     <Content Include="Areas\Admin\Views\TypeOfNews\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\TypeOfNews\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Verifies\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Verifies\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\Verifies\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Verifies\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Verifies\Index.cshtml" />
     <Content Include="bin\ApplicationInsights.config" />
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
@@ -1348,11 +1360,6 @@
     <Content Include="Areas\Admin\Views\Staffs\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Staffs\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Staffs\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Tickets\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Tickets\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\Tickets\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Tickets\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Tickets\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Advertisings\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Advertisings\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Advertisings\Details.cshtml" />
@@ -1436,7 +1443,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Default\" />
-    <Folder Include="Models\Cinema\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

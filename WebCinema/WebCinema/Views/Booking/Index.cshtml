@@ -43,10 +43,12 @@
                         <li>: <b><span id="total">0</span><i> vnđ</i></b></li>
                     </ul>
                     <div class="clear"></div>
+                    @Html.BeginForm() {
                     <ul id="selected-seats" class="scrollbar scrollbar1"></ul>
-
+                    <!--chọn ghế-->
 
                     <button class="checkout-button">Đặt Vé</button>
+                    }
                     <div id="legend"></div>
                 </div>
                 <div style="clear:both"></div>
@@ -87,6 +89,8 @@
                         },
                         click: function () { //Click event
                             if (this.status() == 'available') { //optional seat
+                                // mai xem chỗ này để send về
+                                var MangGhe = new Array();
                                 $('<li>Hàng '+(this.settings.row+1)+' - Ghế '+this.settings.label+'</li>')
 									.attr('id', 'cart-item-'+this.settings.id)
 									.data('seatId', this.settings.id)

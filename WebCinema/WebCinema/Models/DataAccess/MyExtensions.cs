@@ -25,7 +25,7 @@ namespace WebCinema.Models.DataAccess
                 };
 
                 jsonWriter.QuoteName = false;
-                serializer.Serialize(jsonWriter, value);
+                serializer.Serialize(jsonWriter, value); 
 
                 return new HtmlString(stringWriter.ToString());
             }

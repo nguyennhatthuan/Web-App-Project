@@ -21,18 +21,22 @@ namespace WebCinema.Controllers
             var ShowTimeId = int.Parse(STId);
             var Show = db.ShowTimes.SingleOrDefault(s => s.ShowTimeId == ShowTimeId);
             var MovieName = db.Movies.SingleOrDefault(s => s.ShowTimes.Any(p => p.ShowTimeId == ShowTimeId)).Name;
+            var MovieId = db.Movies.SingleOrDefault(s => s.ShowTimes.Any(p => p.ShowTimeId == ShowTimeId)).MovieId;
             var Room = db.Rooms.SingleOrDefault(r => r.ShowTimes.Any(p => p.ShowTimeId == ShowTimeId)).Name;
             var BookedSeat = db.Tickets.Where(s => s.ShowTimeId == ShowTimeId).ToList();
             var TicketPrice = db.TypeOfSeats.SingleOrDefault(t => t.TypeId == 2).Price;
             ViewBag.TicketPrice = TicketPrice;
             ViewBag.MovieName = MovieName;
+            ViewBag.MovieId = MovieId;
             ViewBag.Room = Room;
+            ViewBag.ShowTimeId = STId;
             var Time = Show.StartTime.Value.Hours.ToString() + ":" + Show.StartTime.Value.Minutes.ToString() + ", " + Show.Date.Value.Date.ToString("dd/MM/yyyy");
             ViewBag.Time = Time;
-            if (BookedSeat.Count > 0)
+            var Count = BookedSeat.Count;
+            if (Count > 0)
             {
-                string[] Book = new string[BookedSeat.Count];
-                for (int i = 0; i < BookedSeat.Count; i++)
+                string[] Book = new string[Count];
+                for (int i = 0; i < Count; i++)
                 {
                     Book[i] = BookedSeat.ElementAt(i).SeatId.ToString();
                 }
@@ -48,6 +52,16 @@ namespace WebCinema.Controllers
             //khi chọn các ghế bên Javascript, lưu các ghế đã chọn vào 1 mảng, chứa trong đó
             //sau đó dùng Json chuyển về lại cho C# nhận ra các ghế đã chọn.
 
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult BookingTicket(FormCollection col)
+        {
+            var BookedSeats = col["GheDaChon"].ToString();
+            var MovieId = col["MaPhim"];
+            var ShowTimeId = col["MaSuat"];
+            var Price = col["Tien"];
             return View();
         }
     }

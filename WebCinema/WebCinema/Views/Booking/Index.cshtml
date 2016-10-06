@@ -43,11 +43,15 @@
                         <li>: <b><span id="total">0</span><i> vnđ</i></b></li>
                     </ul>
                     <div class="clear"></div>
-                    @Html.BeginForm() {
                     <ul id="selected-seats" class="scrollbar scrollbar1"></ul>
                     <!--chọn ghế-->
-
-                    <button class="checkout-button">Đặt Vé</button>
+                    @using (Html.BeginForm("BookingTicket", "Booking", FormMethod.Post))
+                    {
+                        <input id="GheDaChon" name="GheDaChon" type="text" hidden="hidden">
+                        <input id="MaPhim" name="MaPhim" type="text" value="@ViewBag.MovieId" hidden="hidden">
+                        <input id="MaSuat" name="MaSuat" type="text" value="@ViewBag.ShowTimeId" hidden="hidden">
+                        <input id="Tien" name="Tien" type="number" hidden="hidden">
+                        <button type="submit" class="checkout-button">Đặt Vé</button>
                     }
                     <div id="legend"></div>
                 </div>
@@ -59,7 +63,7 @@
                     var $cart = $('#selected-seats'), //Sitting Area
 					$counter = $('#counter'), //Votes
 					$total = $('#total'); //Total money
-
+                    var GheDaChon = [];
                     var sc = $('#seat-map').seatCharts({
                         map: [  //Seating chart
 							'aaaaaaaaaa',
@@ -90,21 +94,29 @@
                         click: function () { //Click event
                             if (this.status() == 'available') { //optional seat
                                 // mai xem chỗ này để send về
-                                var MangGhe = new Array();
                                 $('<li>Hàng '+(this.settings.row+1)+' - Ghế '+this.settings.label+'</li>')
 									.attr('id', 'cart-item-'+this.settings.id)
 									.data('seatId', this.settings.id)
 									.appendTo($cart);
-
+                                //-------------------------------
+                                GheDaChon.push(this.settings.id);
+                                document.getElementById("GheDaChon").value=GheDaChon;
+                                //-------------------------------
                                 $counter.text(sc.find('selected').length+1);
                                 $total.text(formatNumber(recalculateTotal(sc)+price,'.',','));
-
+                                document.getElementById("Tien").value=recalculateTotal(sc)+price;
                                 return 'selected';
                             } else if (this.status() == 'selected') { //Checked
+                                //-------------------------------
+                                var i = GheDaChon.indexOf(this.settings.id);
+                                GheDaChon.splice(i,1);
+                                document.getElementById("GheDaChon").value=GheDaChon;
+                                //-------------------------------
                                 //Update Number
                                 $counter.text(sc.find('selected').length-1);
                                 //update totalnum
                                 $total.text(formatNumber(recalculateTotal(sc)-price,'.',','));
+                                document.getElementById("Tien").value=recalculateTotal(sc)-price;
                                 //Delete reservation
                                 $('#cart-item-'+this.settings.id).remove();
                                 //optional
@@ -127,7 +139,6 @@
                     sc.find('selected').each(function () {
                         total += price;
                     });
-
                     return total;
                 }
                 function formatNumber(nStr, decSeperate, groupSeperate) {

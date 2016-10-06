@@ -124,3 +124,4 @@ D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.dll
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.xml
 D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.xml
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache

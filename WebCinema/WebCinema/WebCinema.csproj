@@ -249,24 +249,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Cinema\Advertising.cs" />
-    <Compile Include="Models\Cinema\Comment.cs" />
-    <Compile Include="Models\Cinema\FeedBack.cs" />
-    <Compile Include="Models\Cinema\Movie.cs" />
-    <Compile Include="Models\Cinema\MovieDbContext.cs" />
-    <Compile Include="Models\Cinema\MovieTypes.cs" />
-    <Compile Include="Models\Cinema\News.cs" />
-    <Compile Include="Models\Cinema\RoleGroup.cs" />
-    <Compile Include="Models\Cinema\Room.cs" />
-    <Compile Include="Models\Cinema\Seat.cs" />
-    <Compile Include="Models\Cinema\ShowTime.cs" />
-    <Compile Include="Models\Cinema\Staff.cs" />
-    <Compile Include="Models\Cinema\Ticket.cs" />
-    <Compile Include="Models\Cinema\TypeOfMovie.cs" />
-    <Compile Include="Models\Cinema\TypeOfNew.cs" />
-    <Compile Include="Models\Cinema\TypeOfSeat.cs" />
-    <Compile Include="Models\Cinema\UserAccount.cs" />
-    <Compile Include="Models\Cinema\Verify.cs" />
     <Compile Include="Models\DataAccess\MovieDAO.cs" />
     <Compile Include="Models\DataAccess\MovieGenreDAO.cs" />
     <Compile Include="Models\DataAccess\MyExtensions.cs" />
@@ -1454,6 +1436,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Default\" />
+    <Folder Include="Models\Cinema\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

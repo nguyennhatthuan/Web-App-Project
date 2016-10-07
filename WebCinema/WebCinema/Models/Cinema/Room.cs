@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -14,11 +14,12 @@ namespace WebCinema.Models.Cinema
         {
             ShowTimes = new HashSet<ShowTime>();
         }
-
+        [Display(Name = "Mã rạp")]
         public int RoomId { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Tên rạp")]
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

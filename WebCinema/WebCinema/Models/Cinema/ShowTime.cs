@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -15,15 +15,20 @@ namespace WebCinema.Models.Cinema
             Tickets = new HashSet<Ticket>();
         }
 
+        [Display(Name = "Mã suất chiếu")]
         public int ShowTimeId { get; set; }
 
+        [Display(Name = "Mã phim")]
         public int? MovieId { get; set; }
 
+        [Display(Name = "Mã rạp")]
         public int? RoomId { get; set; }
 
+        [Display(Name = "Giờ bắt đầu")]
         public TimeSpan? StartTime { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày chiếu")]
         public DateTime? Date { get; set; }
 
         public virtual Movie Movie { get; set; }

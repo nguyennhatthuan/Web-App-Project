@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -15,28 +15,35 @@ namespace WebCinema.Models.Cinema
             News = new HashSet<News>();
         }
 
+        [Display(Name = "Mã nhân viên")]
         public int StaffId { get; set; }
 
+        [Display(Name = "Mã nhóm quyền")]
         public int? RGId { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Tên User")]
         public string UserName { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Mật khẩu")]
         public string Password_ { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Tên nhân viên")]
         public string Name { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày sinh")]
         public DateTime? Birth { get; set; }
 
         [StringLength(30)]
         public string Email { get; set; }
 
         [StringLength(15)]
+        [Display(Name = "Số điện thoại")]
         public string Phone { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

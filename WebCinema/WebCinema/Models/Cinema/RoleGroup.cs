@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -16,9 +16,11 @@ namespace WebCinema.Models.Cinema
         }
 
         [Key]
+        [Display(Name = "Mã nhóm quyền")]
         public int RGId { get; set; }
 
         [StringLength(30)]
+        [Display(Name = "Tên nhóm quyền")]
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

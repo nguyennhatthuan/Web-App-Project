@@ -10,7 +10,7 @@ using WebCinema.Models.Cinema;
 
 namespace WebCinema.Areas.Admin.Controllers
 {
-    public class UserAccountsController : Controller
+    public class UserAccountsController : BaseController
     {
         private MovieDbContext db = new MovieDbContext();
 

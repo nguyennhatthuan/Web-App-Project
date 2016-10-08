@@ -30,5 +30,10 @@ namespace WebCinema.Models.DataAccess
             }
             return Genre;
         }
+
+        public string GetGenreName(int Id)
+        {
+            return db.TypeOfMovies.FirstOrDefault(t => t.TypeId == Id).Name.ToString();
+        }
     }
 }

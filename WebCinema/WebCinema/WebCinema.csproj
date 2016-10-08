@@ -1439,6 +1439,7 @@
     <Content Include="Views\News\_PartialTopNews.cshtml" />
     <Content Include="Views\Movie\_PartialRandomMovie.cshtml" />
     <Content Include="Views\Booking\Index.cshtml" />
+    <Content Include="Views\Movie\_PartialShowTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -18,6 +18,11 @@ namespace WebCinema.Controllers
         // GET: Booking
         public ActionResult Index(string STId)
         {
+            if(Session["Account"]==null || Session["Account"].ToString()=="")
+            {
+                return RedirectToAction("_PartialLogin", "Cinema");
+                // gọi sự kiện OnClick bên Javasctipt
+            }
             var ShowTimeId = int.Parse(STId);
             var Show = db.ShowTimes.SingleOrDefault(s => s.ShowTimeId == ShowTimeId);
             var MovieName = db.Movies.SingleOrDefault(s => s.ShowTimes.Any(p => p.ShowTimeId == ShowTimeId)).Name;
@@ -46,22 +51,16 @@ namespace WebCinema.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index()
-        {
-            //Send to Thuấn in the future, To do:
-            //khi chọn các ghế bên Javascript, lưu các ghế đã chọn vào 1 mảng, chứa trong đó
-            //sau đó dùng Json chuyển về lại cho C# nhận ra các ghế đã chọn.
-
-            return View();
-        }
-
-        [HttpPost]
         public ActionResult BookingTicket(FormCollection col)
         {
             var BookedSeats = col["GheDaChon"].ToString();
             var MovieId = col["MaPhim"];
             var ShowTimeId = col["MaSuat"];
             var Price = col["Tien"];
+            if(Session["Account"]==null || Session["Account"].ToString()=="")
+            {
+                return RedirectToAction("Login", "Cinema");
+            }
             return View();
         }
     }

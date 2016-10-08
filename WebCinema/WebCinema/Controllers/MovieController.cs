@@ -15,13 +15,32 @@ namespace WebCinema.Controllers
         {
             MovieDAO MovieDAO = new MovieDAO();
             var movie = MovieDAO.GetOneMovie(Id);
+            var Genre = MovieDAO.GetGenreofMovie(Id);
+            var TheLoai = "";
+            if (Genre.Count!=0)
+            {
+                TheLoai = Genre.First().Name;
+                foreach (var item in Genre.Skip(1))
+                {
+                    TheLoai += ", " + item.Name;
+                }
+            }
+            ViewBag.TheLoai = TheLoai;
             return View(movie);
+        }
+
+        public ActionResult _PartialShowTime(int Id)
+        {
+            MovieDAO MovieDAO = new MovieDAO();
+            var showTime = MovieDAO.GetShowTimeMovie(Id);
+            return PartialView(showTime);
         }
 
         public ActionResult Genre(int Id)
         {
             MovieGenreDAO genre = new MovieGenreDAO();
             List<MovieGenre> Movies = genre.GetMovieByGenre(Id);
+            ViewBag.GenreName = genre.GetGenreName(Id);
             return View(Movies);
         }
 

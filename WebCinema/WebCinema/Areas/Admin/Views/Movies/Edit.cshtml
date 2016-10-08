@@ -54,8 +54,9 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.Description_, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.EditorFor(model => model.Description_, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Description_, "", new { @class = "text-danger" })
+                        @*@Html.EditorFor(model => model.Description_, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Description_, "", new { @class = "text-danger" })*@
+                        @Html.TextAreaFor(model => model.Description_, new { @id = "ckDescription_" })
                     </div>
                 </div>
 
@@ -194,3 +195,6 @@
 <!-- Custom Theme JavaScript -->
 <script src="~/Areas/Admin/Content/dist/js/sb-admin-2.js"></script>
 
+<!-- CKEditer -->
+<script src="~/Areas/Admin/Content/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">CKEDITOR.replace("ckDescription_")</script>

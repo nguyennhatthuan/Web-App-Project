@@ -51,7 +51,8 @@
                 </dt>
 
                 <dd>
-                    @Html.DisplayFor(model => model.Description_)
+                    @*@Html.DisplayFor(model => model.Description_)*@
+                    @Html.Raw(Model.Description_)
                 </dd>
 
                 <dt>

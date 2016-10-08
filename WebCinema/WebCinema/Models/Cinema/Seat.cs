@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -15,12 +15,16 @@ namespace WebCinema.Models.Cinema
         }
 
         [StringLength(5)]
+        [Display(Name = "Mã ghế")]
         public string SeatId { get; set; }
 
+        [Display(Name = "Mã loại ghế")]
         public int? TypeId { get; set; }
 
+        [Display(Name = "Hàng ghế")]
         public int Row_ { get; set; }
 
+        [Display(Name = "Số ghế")]
         public int Number_ { get; set; }
 
         public virtual TypeOfSeat TypeOfSeat { get; set; }

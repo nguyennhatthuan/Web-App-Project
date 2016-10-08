@@ -34,6 +34,9 @@
                         <a href="@Url.Action("Index","Movies")">Danh sách phim</a>
                     </li>
                     <li>
+                        <a href="@Url.Action("Index","MovieTypes")">Danh sách phim - thể loại</a>
+                    </li>
+                    <li>
                         <a href="@Url.Action("Index","TypeOfMovies")">Thể loại phim</a>
                     </li>
                 </ul>
@@ -64,13 +67,16 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-table fa-fw"></i> Vé<span class="fa arrow"></span></a>
+                <a href="@Url.Action("Index","Tickets")"><i class="fa fa-table fa-fw"></i> vé</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-table fa-fw"></i> Hóa đơn<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="@Url.Action("Index","Tickets")">Danh sách vé</a>
+                        <a href="@Url.Action("Index","Bills")">Danh sách hóa đơn</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Index","Verifies")">Xác nhận vé</a>
+                        <a href="@Url.Action("Index","BillDetails")">Danh sách hóa đơn chi tiết</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -15,13 +15,17 @@ namespace WebCinema.Models.Cinema
             BillDetails = new HashSet<BillDetail>();
         }
 
+        [Display(Name ="Mã hóa đơn")]
         public int BillId { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày lập hóa đơn")]
         public DateTime? Date_ { get; set; }
 
+        [Display(Name = "Thành tiền")]
         public decimal? Price { get; set; }
 
+        [Display(Name = "Mã User")]
         public int? UserId { get; set; }
 
         public virtual UserAccount UserAccount { get; set; }

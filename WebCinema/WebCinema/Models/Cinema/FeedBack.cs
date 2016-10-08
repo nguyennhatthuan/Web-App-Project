@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -9,14 +9,18 @@ namespace WebCinema.Models.Cinema
     [Table("FeedBack")]
     public partial class FeedBack
     {
+        [Display(Name = "Mã phản hồi")]
         public int FeedBackId { get; set; }
 
+        [Display(Name = "Mã User")]
         public int? UserId { get; set; }
 
         [Column(TypeName = "ntext")]
         [Required]
+        [Display(Name = "Nội dung")]
         public string Content { get; set; }
 
+        [Display(Name = "Ngày phản hồi")]
         public TimeSpan? CreatedDate { get; set; }
 
         public virtual UserAccount UserAccount { get; set; }

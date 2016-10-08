@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -18,20 +18,25 @@ namespace WebCinema.Models.Cinema
         }
 
         [Key]
+        [Display(Name = "Mã User")]
         public int UserId { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Tên User")]
         public string UserName { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Mật khẩu")]
         public string Password_ { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Tên khách hàng")]
         public string Name { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày sinh")]
         public DateTime? Birth { get; set; }
 
         [StringLength(30)]
@@ -39,6 +44,7 @@ namespace WebCinema.Models.Cinema
 
         [Required]
         [StringLength(15)]
+        [Display(Name = "Số điện thoại")]
         public string Phone { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

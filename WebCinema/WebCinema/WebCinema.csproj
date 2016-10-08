@@ -219,18 +219,24 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Constants.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdvertisingsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BillDetailsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BillsController.cs" />
     <Compile Include="Areas\Admin\Controllers\CommentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\FeedBacksController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\MoviesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MovieTypesController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoleGroupsController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoomsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SeatsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ShowTimesController.cs" />
     <Compile Include="Areas\Admin\Controllers\StaffsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TicketsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TypeOfMoviesController.cs" />
     <Compile Include="Areas\Admin\Controllers\TypeOfNewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TypeOfSeatsController.cs" />
@@ -1366,6 +1372,24 @@
     <Content Include="Areas\Admin\Views\Advertisings\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Advertisings\Index.cshtml" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Areas\Admin\Views\MovieTypes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\MovieTypes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\MovieTypes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Tickets\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Tickets\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Tickets\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Tickets\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Tickets\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Bills\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Bills\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Bills\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Bills\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Bills\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BillDetails\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\BillDetails\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\BillDetails\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\BillDetails\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\BillDetails\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1443,6 +1467,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Areas\Admin\Views\Default\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -9,16 +9,21 @@ namespace WebCinema.Models.Cinema
     [Table("Comment")]
     public partial class Comment
     {
+        [Display(Name = "Mã bình luận")]
         public int CommentId { get; set; }
 
+        [Display(Name = "Mã phim")]
         public int? MovieId { get; set; }
 
+        [Display(Name = "Mã User")]
         public int? UserId { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày bình luận")]
         public DateTime? Date_ { get; set; }
 
         [Column(TypeName = "ntext")]
+        [Display(Name = "Nội dung")]
         public string Content { get; set; }
 
         public virtual Movie Movie { get; set; }

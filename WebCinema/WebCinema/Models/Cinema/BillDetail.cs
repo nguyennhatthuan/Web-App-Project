@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -11,14 +11,17 @@ namespace WebCinema.Models.Cinema
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name = "Mã hóa đơn")]
         public int BillId { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name = "Mã vé")]
         public int TicketId { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "ghi chú")]
         public string Note { get; set; }
 
         public virtual Bill Bill { get; set; }

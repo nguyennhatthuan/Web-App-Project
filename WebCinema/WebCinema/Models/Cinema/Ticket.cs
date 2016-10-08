@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -15,15 +15,20 @@ namespace WebCinema.Models.Cinema
             BillDetails = new HashSet<BillDetail>();
         }
 
+        [Display(Name = "Mã vé")]
         public int TicketId { get; set; }
 
         [StringLength(5)]
+        [Display(Name = "Mã ghế")]
         public string SeatId { get; set; }
 
+        [Display(Name = "Mã suất chiếu")]
         public int? ShowTimeId { get; set; }
 
+        [Display(Name = "Ngày đặt vé")]
         public DateTime? BookingDate { get; set; }
 
+        [Display(Name = "Tình trạng")]
         public bool? Status_ { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

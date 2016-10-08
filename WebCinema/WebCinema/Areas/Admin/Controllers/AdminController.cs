@@ -7,7 +7,7 @@ using WebCinema.Models.DataAccess;
 
 namespace WebCinema.Areas.Admin.Controllers
 {
-    public class AdminController : Controller
+    public class AdminController : BaseController
     {
 
         // GET: Admin/Admin

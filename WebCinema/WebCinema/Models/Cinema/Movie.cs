@@ -1,4 +1,4 @@
-namespace WebCinema.Models.Cinema
+﻿namespace WebCinema.Models.Cinema
 {
     using System;
     using System.Collections.Generic;
@@ -18,27 +18,35 @@ namespace WebCinema.Models.Cinema
             ShowTimes = new HashSet<ShowTime>();
         }
 
+        [Display(Name = "Mã phim")]
         public int MovieId { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Tên phim")]
         public string Name { get; set; }
 
+        [Display(Name = "Thời lượng")]
         public int? Length_ { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Đạo diễn")]
         public string Director { get; set; }
 
         [StringLength(100)]
+        [Display(Name = "Diễn viên")]
         public string Stars { get; set; }
 
         [Column(TypeName = "ntext")]
+        [Display(Name = "Mô tả")]
         public string Description_ { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày công chiếu")]
         public DateTime? ReleaseDate { get; set; }
 
         [StringLength(5)]
+        [Display(Name = "Định dạng")]
         public string Format_ { get; set; }
 
         [StringLength(100)]
@@ -48,21 +56,27 @@ namespace WebCinema.Models.Cinema
         public string Poster { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Ảnh nhỏ")]
         public string Thumbnail { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Ngôn ngữ")]
         public string Language_ { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày tạo")]
         public DateTime? CreatedDate { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Người tạo")]
         public string CreatedBy { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Ngày chỉnh sửa")]
         public DateTime? ModifiedDate { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Người chỉnh sửa")]
         public string ModifiedBy { get; set; }
 
         [StringLength(250)]
@@ -71,6 +85,7 @@ namespace WebCinema.Models.Cinema
         [StringLength(250)]
         public string MetaDescription { get; set; }
 
+        [Display(Name = "Tình trạng")]
         public bool? Status_ { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

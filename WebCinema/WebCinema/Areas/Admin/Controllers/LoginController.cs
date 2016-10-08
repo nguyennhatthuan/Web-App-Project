@@ -37,6 +37,7 @@ namespace WebCinema.Areas.Admin.Controllers
                 if (user != null)
                 {
                     Session["Account"] = user;
+                    Session.Add(Constants.USER_SESSION, user);
                     return RedirectToAction("Index", "Admin");
                 }
                 else

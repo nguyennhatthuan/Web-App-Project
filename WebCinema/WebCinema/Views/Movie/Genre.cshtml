@@ -5,7 +5,7 @@
 }
 <div class="browse-agile-w3ls general-w3ls">
     <div class="tittle-head">
-        <h4 class="latest-text">Family Movies </h4>
+        <h4 class="latest-text">@ViewBag.GenreName </h4>
         <div class="container">
             <div class="agileits-single-top">
                 <ol class="breadcrumb">
@@ -21,7 +21,7 @@
             {
                 <div class="col-md-2 w3l-movie-gride-agile">
                     <a href="single.html" class="hvr-shutter-out-horizontal">
-                        <img src="~/images/Movies/@item.MoviePoster" title="album-name" alt=" " style="width:128px; height:268px;" />
+                        <img src="~/images/Movies/@item.MoviePoster" title="album-name" alt=" " style="width:182px; height:268px;" />
                         <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
                     </a>
                     <div class="mid-1">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="mid-2">
 
-                            <p>@item.ReleaseDate</p>
+                            <p>@item.ReleaseDate.Value.ToShortDateString()</p>
                             <div class="block-stars">
                                 <ul class="w3l-ratings">
                                     <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>

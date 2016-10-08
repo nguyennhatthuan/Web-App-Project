@@ -20,7 +20,7 @@ namespace WebCinema.Controllers
         public ActionResult _PartialSlidey()
         {
             MovieDAO movieDAO = new MovieDAO();
-            var newMovie = movieDAO.GetMovies(5);
+            var newMovie = movieDAO.GetRandomMovies(5);
             return PartialView(newMovie);
         }
 

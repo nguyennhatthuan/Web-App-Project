@@ -1,0 +1,21 @@
+﻿@model IEnumerable<WebCinema.Models.Cinema.ShowTime>
+
+@foreach (var Ngay in Model.GroupBy(s => s.Date))
+{
+    <div class="col-md-4 movies-dates">
+        <div class="movie-date-selection">
+            <ul>
+                <li class="location">
+                    <a href="pic-a-movie.html"><i class="fa fa-map-marker"></i>Lịch chiếu ngày: @Ngay.First().Date.Value.ToShortDateString()</a>
+                </li>
+                @foreach (var Show in Ngay)
+                {
+
+                    <li class="time">
+                        <a href="@Url.Action("Index","Booking",new {STId = Show.ShowTimeId })">@Show.StartTime</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+}

@@ -17,6 +17,11 @@ namespace WebCinema.Models.DataAccess
                 return db.Movies.OrderByDescending(m => m.CreatedDate).Take(count).ToList();
         }
 
+        public List<TypeOfMovie> GetGenreofMovie(int Id)
+        {
+            return db.TypeOfMovies.Where(t => t.MovieTypes.Any(m => m.MovieId == Id)).ToList();
+        }
+
         public Movie GetOneMovie(int Id)
         {
             return db.Movies.SingleOrDefault(p => p.MovieId == Id);
@@ -25,6 +30,13 @@ namespace WebCinema.Models.DataAccess
         public List<Movie> GetRandomMovies(int count=0)
         {
             return db.Movies.GetRandomItems(count).ToList();
+        }
+
+        public List<ShowTime> GetShowTimeMovie(int Id)
+        {
+            return db.ShowTimes.Where(m => m.MovieId == Id && m.Date.Value.Year >= DateTime.Now.Year
+                            && m.Date.Value.Month >= DateTime.Now.Month
+                            && m.Date.Value.Day >= DateTime.Now.Day).ToList();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿
+﻿@using WebCinema.Areas.Admin
+@using WebCinema.Models.Cinema
+
 @{
     Layout = null;
 }
@@ -253,7 +255,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="@Url.Action("Index","Login" )"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>
+                            <a href="@Url.Action("Logout","Login")"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

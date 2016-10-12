@@ -36,7 +36,7 @@ namespace WebCinema.Areas.Admin.Controllers
             {
                 if (user != null)
                 {
-                    Session["Account"] = user;
+                    Session["AccountAdmin"] = user;
                     Session.Add(Constants.USER_SESSION, user);
                     return RedirectToAction("Index", "Admin");
                 }
@@ -47,6 +47,12 @@ namespace WebCinema.Areas.Admin.Controllers
                 }
             }
             return View();       
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return RedirectToAction("Index", "Login");
         }
     }
 }

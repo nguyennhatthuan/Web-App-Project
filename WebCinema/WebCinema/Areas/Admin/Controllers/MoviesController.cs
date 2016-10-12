@@ -45,6 +45,7 @@ namespace WebCinema.Areas.Admin.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MovieId,Name,Length_,Director,Stars,Description_,ReleaseDate,Format_,Trailer,Poster,Thumbnail,Language_,CreatedDate,CreatedBy,ModifiedDate,ModifiedBy,MetaKeywords,MetaDescription,Status_")] Movie movie)
         {
@@ -78,6 +79,7 @@ namespace WebCinema.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "MovieId,Name,Length_,Director,Stars,Description_,ReleaseDate,Format_,Trailer,Poster,Thumbnail,Language_,CreatedDate,CreatedBy,ModifiedDate,ModifiedBy,MetaKeywords,MetaDescription,Status_")] Movie movie)
         {
             if (ModelState.IsValid)

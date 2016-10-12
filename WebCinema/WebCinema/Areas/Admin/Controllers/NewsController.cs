@@ -49,6 +49,7 @@ namespace WebCinema.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "NewsId,TypeId,StaffId,Title,Content,CreatedDate,CreatedBy,ModifiedDate,ModifiedBy")] News news)
         {
             if (ModelState.IsValid)
@@ -85,6 +86,7 @@ namespace WebCinema.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "NewsId,TypeId,StaffId,Title,Content,CreatedDate,CreatedBy,ModifiedDate,ModifiedBy")] News news)
         {
             if (ModelState.IsValid)

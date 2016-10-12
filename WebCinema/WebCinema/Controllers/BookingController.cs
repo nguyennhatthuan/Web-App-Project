@@ -18,7 +18,7 @@ namespace WebCinema.Controllers
         // GET: Booking
         public ActionResult Index(string STId)
         {
-            if(Session["Account"]==null || Session["Account"].ToString()=="")
+            if (Session["Account"] == null || Session["Account"].ToString() == "")
             {
                 return RedirectToAction("_PartialLogin", "Cinema");
                 // gọi sự kiện OnClick bên Javasctipt
@@ -57,10 +57,53 @@ namespace WebCinema.Controllers
             var MovieId = col["MaPhim"];
             var ShowTimeId = col["MaSuat"];
             var Price = col["Tien"];
-            if(Session["Account"]==null || Session["Account"].ToString()=="")
+            UserAccount User = (UserAccount)Session["Account"];
+
+            Bill bill = new Bill();
+            bill.Date_ = DateTime.Now;
+            bill.Price = decimal.Parse(Price);
+            bill.UserId = User.UserId;
+            db.Bills.Add(bill);
+            db.SaveChanges();
+
+            string[] Seats = BookedSeats.Split(',');
+            foreach (var item in Seats)
             {
-                return RedirectToAction("Login", "Cinema");
+                Ticket ticket = new Ticket();
+                ticket.SeatId = item;
+                ticket.ShowTimeId = int.Parse(ShowTimeId);
+                ticket.BookingDate = DateTime.Now;
+                ticket.Status_ = false;
+                db.Tickets.Add(ticket);
             }
+            db.SaveChanges();
+
+            decimal GiaTien = decimal.Parse(Price);
+            var billId = db.Bills.Where(b => b.Price == GiaTien && b.UserId == User.UserId && b.Date_.Value.Year == DateTime.Now.Year && b.Date_.Value.Month == DateTime.Now.Month && b.Date_.Value.Day == DateTime.Now.Day).OrderByDescending(b=>b.BillId).Single().BillId;
+            var ticketBookedId = "";
+            foreach (var item in Seats)
+            {
+                var ticketId = db.Tickets.FirstOrDefault(t => t.SeatId == item).TicketId;
+                ticketBookedId += ", " + ticketId;
+            }
+
+            string[] TicketBooked = ticketBookedId.Split(',');
+
+            foreach (var item in TicketBooked.Skip(1))
+            {
+                BillDetail billDetails = new BillDetail();
+                billDetails.BillId = billId;
+                billDetails.TicketId = int.Parse(item);
+                db.BillDetails.Add(billDetails);
+            }
+            db.SaveChanges();
+            return RedirectToAction("Success", new { BillId = billId });
+        }
+
+        public ActionResult Success(int BillId)
+        {
+            string Notification = "Cám ơn bạn đã mua vé, mã Hóa Đơn của bạn là " + BillId + ". Chúng tôi sẽ liên hệ bạn nhanh nhất có thể.";
+            ViewBag.Notification = Notification;
             return View();
         }
     }

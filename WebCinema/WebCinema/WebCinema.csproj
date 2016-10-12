@@ -351,6 +351,7 @@
     <Content Include="Areas\Admin\Content\bower_components\datatables-plugins\features\alphabetSearch\dataTables.alphabetSearch.css" />
     <Content Include="Areas\Admin\Content\bower_components\datatables-plugins\features\alphabetSearch\dataTables.alphabetSearch.js" />
     <Content Include="Areas\Admin\Content\bower_components\datatables-plugins\features\alphabetSearch\dataTables.alphabetSearch.min.js" />
+    <Content Include="Areas\Admin\Content\bower_components\datatables-plugins\features\lengthLinks\dataTables.alphabetSearch.min.js" />
     <Content Include="Areas\Admin\Content\bower_components\datatables-plugins\features\lengthLinks\dataTables.lengthLinks.css" />
     <Content Include="Areas\Admin\Content\bower_components\datatables-plugins\features\lengthLinks\dataTables.lengthLinks.js" />
     <Content Include="Areas\Admin\Content\bower_components\datatables-plugins\features\lengthLinks\dataTables.lengthLinks.min.js" />
@@ -1702,6 +1703,7 @@
     <Content Include="Areas\Admin\Content\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Areas\Admin\Content\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Areas\Admin\Content\ckeditor\skins\moono\readme.md" />
+    <Content Include="Areas\Admin\Views\Shared\_HeadMenu.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

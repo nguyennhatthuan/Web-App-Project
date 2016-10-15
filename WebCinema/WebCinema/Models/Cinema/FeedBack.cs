@@ -21,7 +21,7 @@
         public string Content { get; set; }
 
         [Display(Name = "Ngày phản hồi")]
-        public TimeSpan? CreatedDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
 
         public virtual UserAccount UserAccount { get; set; }
     }

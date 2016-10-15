@@ -27,7 +27,19 @@ namespace WebCinema.Controllers
         public ActionResult _PartialNewMovieBottomSlidey()
         {
             MovieDAO movieDAO = new MovieDAO();
-            var movies = movieDAO.GetMovies(9);
+            var movies = movieDAO.GetRandomMovies(9);
+            return PartialView(movies);
+        }
+        public ActionResult _PartialFeatureFilm()
+        {
+            MovieDAO movieDAO = new MovieDAO();
+            var movies = movieDAO.GetRandomMovies(12);
+            return PartialView(movies);
+        }
+        public ActionResult _PartialRecentlyAdded()
+        {
+            MovieDAO movieDAO = new MovieDAO();
+            var movies = movieDAO.GetMovies(4);
             return PartialView(movies);
         }
         // Viết tạm cái Login, chưa thêm View xem thông tin User
@@ -43,7 +55,7 @@ namespace WebCinema.Controllers
             var Password = col["Password"];
             UserDAO userDAO = new UserDAO();
             UserAccount user = userDAO.Login(UserName, Password);
-            if (User!=null)
+            if (User != null)
             {
                 Session["Account"] = user;
                 return RedirectToAction("Index", "Cinema");
@@ -54,7 +66,7 @@ namespace WebCinema.Controllers
                 return ViewBag.ThongBaoLoi = "Đăng nhập thất bại";
             }
         }
-        
+
         [HttpPost]
         public ActionResult _PartialRegister(FormCollection col)
         {
@@ -64,7 +76,7 @@ namespace WebCinema.Controllers
             var Phone = col["Phone"];
             UserDAO userDAO = new UserDAO();
             int Result = userDAO.Register(UserName, Password, Email, Phone);
-            if(Result==1)
+            if (Result == 1)
             {
                 ViewBag.ThongBao = "Đăng ký thành công";
                 return RedirectToAction("Index", "Cinema");
@@ -79,6 +91,28 @@ namespace WebCinema.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(FormCollection col)
+        {
+            UserAccount User = Session["Account"] as UserAccount;
+            var email = col["email"];
+            var subject = col["subject"];
+            var message = col["message"];
+            var Content = email + Environment.NewLine + subject + Environment.NewLine + message;
+            FeedBack fb = new FeedBack();
+            if (User!=null) fb.UserId = User.UserId;
+            fb.CreatedDate = DateTime.Now;
+            fb.Content = Content;
+            UserDAO userDAO = new UserDAO();
+            userDAO.AddFeedback(fb);
+            return RedirectToAction("Index");
         }
     }
 }

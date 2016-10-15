@@ -34,5 +34,19 @@ namespace WebCinema.Models.DataAccess
                 return 0;
             }
         }
+
+        public int AddFeedback(FeedBack fb)
+        {
+            try
+            {
+                db.FeedBacks.Add(fb);
+                db.SaveChanges();
+                return 1;
+            }
+            catch(DataException)
+            {
+                return 0;
+            }
+        }
     }
 }

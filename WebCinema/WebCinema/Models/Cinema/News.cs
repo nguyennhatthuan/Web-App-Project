@@ -8,6 +8,7 @@
 
     public partial class News
     {
+
         [Display(Name = "Mã tin tức")]
         public int NewsId { get; set; }
 
@@ -25,9 +26,10 @@
         [Display(Name = "Nội dung")]
         public string Content { get; set; }
 
+        private DateTime? dateCreated;
         [Column(TypeName = "date")]
         [Display(Name = "Ngày đăng")]
-        public DateTime? CreatedDate { get; set; }
+        public DateTime? CreatedDate { get { return dateCreated ?? DateTime.Now; } set { dateCreated = value; } }
 
         [StringLength(50)]
         [Display(Name = "Người đăng")]

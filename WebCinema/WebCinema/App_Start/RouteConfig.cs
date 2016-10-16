@@ -18,6 +18,7 @@ namespace WebCinema
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Cinema", action = "Index", id = UrlParameter.Optional }
             );
+            
         }
     }
 }

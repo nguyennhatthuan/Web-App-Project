@@ -79,28 +79,6 @@ D:\Study\Visual Studio\ASP.NET\WebCinema\WebCinema\bin\Microsoft.Owin.Security.T
 D:\Study\Visual Studio\ASP.NET\WebCinema\WebCinema\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Study\Visual Studio\ASP.NET\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\Study\Visual Studio\ASP.NET\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\ApplicationInsights.config
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\VBCSCompiler.exe.config
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\csc.exe
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\System.Collections.Immutable.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\System.Reflection.Metadata.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\vbc.exe
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\VBCSCompiler.exe
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll.config
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.dll
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.xml
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.xml
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\ApplicationInsights.config
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\roslyn\csc.exe
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -123,4 +101,25 @@ D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\PagedList.xml
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.xml
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
 D:\DO AN\MovieTicket\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb
-D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.csprojResolveAssemblyReference.cache
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\ApplicationInsights.config
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\csc.exe
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\System.Collections.Immutable.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\System.Reflection.Metadata.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\vbc.exe
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\VBCSCompiler.exe
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\roslyn\VBCSCompiler.exe.config
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll.config
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\WebCinema.pdb
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.xml
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\bin\PagedList.Mvc.xml
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.dll
+D:\GitHub\Repos\Web-App-Project\WebCinema\WebCinema\obj\Debug\WebCinema.pdb

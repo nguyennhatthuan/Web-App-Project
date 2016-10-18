@@ -47,7 +47,7 @@
                     @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
                         @*@Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })*@
-                        <input type="date" name="Date" />
+                        <input type="date" name="Date" value="@string.Format("{0:yyyy-MM-dd}", Model.Date)"/>
                         @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
                     </div>
                 </div>

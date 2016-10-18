@@ -6,8 +6,9 @@
 }
 
 <div class="container-fluid">
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Create", "Movies", FormMethod.Post, new { @enctype = "multipart/form-data" }))
     {
+       
         @Html.AntiForgeryToken()
         <div class="row">
             <div class="col-lg-12">
@@ -53,9 +54,9 @@
                     @Html.LabelFor(model => model.Description_, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
                         @*@Html.EditorFor(model => model.Description_, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Description_, "", new { @class = "text-danger" })*@
+                            @Html.ValidationMessageFor(model => model.Description_, "", new { @class = "text-danger" })*@
                         @Html.TextAreaFor(model => model.Description_, new { @id = "ckDescription_" })
-                        
+
                     </div>
                 </div>
 
@@ -87,9 +88,10 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.Poster, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-4">
-                        @*<input type="file" name="fileUpload">*@
-                        @Html.EditorFor(model => model.Poster, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Poster, "", new { @class = "text-danger" })  
+                        <input type="file" name="fileUpload">
+                        @ViewBag.ThongBao
+                        @*@Html.EditorFor(model => model.Poster, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @*@Html.ValidationMessageFor(model => model.Poster, "", new { @class = "text-danger" })*@
                     </div>
                 </div>
 

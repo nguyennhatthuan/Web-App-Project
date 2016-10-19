@@ -884,6 +884,7 @@
     <Content Include="images\Movies\TheGirlontheTrain.jpg" />
     <Content Include="images\Movies\TheMagnificentSeven.jpg" />
     <Content Include="images\Movies\TheMazeRunnerTheDeathCure.jpg" />
+    <Content Include="images\Movies\ToiLaBeTo.jpg" />
     <Content Include="images\Movies\UnderworldBloodWars.jpg" />
     <Content Include="images\Movies\Warforthe lanetoftheApes.jpg" />
     <Content Include="images\Movies\xxxreturnofxandercage.jpg" />
@@ -1170,6 +1171,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Areas\Admin\Views\Default\" />
+    <Folder Include="images\Thumbnail\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

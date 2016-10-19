@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebCinema.Models.Cinema;
+using System.IO;
 
 namespace WebCinema.Areas.Admin.Controllers
 {
@@ -47,16 +48,38 @@ namespace WebCinema.Areas.Admin.Controllers
         [HttpPost]
         [ValidateInput(false)]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MovieId,Name,Length_,Director,Stars,Description_,ReleaseDate,Format_,Trailer,Poster,Thumbnail,Language_,CreatedDate,CreatedBy,ModifiedDate,ModifiedBy,MetaKeywords,MetaDescription,Status_")] Movie movie)
+        public ActionResult Create([Bind(Include = "MovieId,Name,Length_,Director,Stars,Description_,ReleaseDate,Format_,Trailer,Poster,Thumbnail,Language_,CreatedDate,CreatedBy,ModifiedDate,ModifiedBy,MetaKeywords,MetaDescription,Status_")] Movie movie, HttpPostedFileBase fileUpload)
         {
-            if (ModelState.IsValid)
+
+            if (fileUpload == null)
             {
-                db.Movies.Add(movie);
-                db.SaveChanges();
+                ViewBag.ThongBao = "Vui lòng chọn ảnh bìa";
+                return View(movie);
+            }
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    //Luu ten file
+                    var fileName = Path.GetFileName(fileUpload.FileName);
+                    //Luu duong dan file
+                    var path = Path.Combine(Server.MapPath("~/images/Movies"), fileName);
+                    if (System.IO.File.Exists(path))
+                    {
+                        ViewBag.ThongBao = "Hình ảnh đã tồn tại";
+                        return View(movie);
+                    }
+                    else
+                    {
+                        fileUpload.SaveAs(path);
+                    }
+                    movie.Poster = fileName;
+                    db.Movies.Add(movie);
+                    db.SaveChanges();
+                }
                 return RedirectToAction("Index");
             }
 
-            return View(movie);
         }
 
         // GET: Admin/Movies/Edit/5
@@ -80,15 +103,37 @@ namespace WebCinema.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Edit([Bind(Include = "MovieId,Name,Length_,Director,Stars,Description_,ReleaseDate,Format_,Trailer,Poster,Thumbnail,Language_,CreatedDate,CreatedBy,ModifiedDate,ModifiedBy,MetaKeywords,MetaDescription,Status_")] Movie movie)
+        public ActionResult Edit([Bind(Include = "MovieId,Name,Length_,Director,Stars,Description_,ReleaseDate,Format_,Trailer,Poster,Thumbnail,Language_,CreatedDate,CreatedBy,ModifiedDate,ModifiedBy,MetaKeywords,MetaDescription,Status_")] Movie movie, HttpPostedFileBase fileUpload)
         {
+            
             if (ModelState.IsValid)
             {
+
+                if (fileUpload == null)
+                {
+                }
+                else
+                {
+                    //Luu ten file
+                    var fileName = Path.GetFileName(fileUpload.FileName);
+                    //Luu duong dan file
+                    var path = Path.Combine(Server.MapPath("~/images/Movies"), fileName);
+                    if (System.IO.File.Exists(path))
+                    {
+                        ViewBag.ThongBao = "Hình ảnh đã tồn tại";
+                        return View(movie);
+                    }
+                    else
+                    {
+                        fileUpload.SaveAs(path);
+
+                    }
+                    movie.Poster = fileName;
+                }
                 db.Entry(movie).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
             }
-            return View(movie);
+            return RedirectToAction("Index");
         }
 
         // GET: Admin/Movies/Delete/5

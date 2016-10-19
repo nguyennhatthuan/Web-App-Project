@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<WebCinema.Models.Cinema.Movie>
 
+<h3>Có thể bạn sẽ thích</h3>
+<br />
 <div class="browse-inner-come-agile-w3">
     @foreach (var item in Model)
     {
         <div class="col-md-2 w3l-movie-gride-agile">
-            <a href="single.html" class="hvr-shutter-out-horizontal">
+            <a href="@Url.Action("Details", "Movie", new { Id = item.MovieId })" class="hvr-shutter-out-horizontal">
                 <img src="~/images/Movies/@item.Poster" title="album-name" alt=" " style="width:182px; height:268px;" />
                 <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
             </a>
@@ -13,8 +15,7 @@
                     <h6><a href="@Url.Action("Details", "Movie", new { Id = item.MovieId })">@item.Name</a></h6>
                 </div>
                 <div class="mid-2">
-
-                    <p>@item.ReleaseDate.Value.ToShortDateString()</p>
+                    <p><center>@item.ReleaseDate.Value.ToShortDateString()</center></p>
                     <div class="clearfix"></div>
                 </div>
 

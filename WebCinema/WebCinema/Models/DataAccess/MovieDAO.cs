@@ -34,7 +34,8 @@ namespace WebCinema.Models.DataAccess
 
         public List<ShowTime> GetShowTimeMovie(int Id)
         {
-            return db.ShowTimes.Where(m => m.MovieId == Id && m.Date.Value.Year >= DateTime.Now.Year
+            return db.ShowTimes.Where(m => m.MovieId == Id
+                            && m.Date.Value.Year >= DateTime.Now.Year
                             && m.Date.Value.Month >= DateTime.Now.Month
                             && m.Date.Value.Day >= DateTime.Now.Day).ToList();
         }

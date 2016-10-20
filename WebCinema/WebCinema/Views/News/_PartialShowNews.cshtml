@@ -5,7 +5,7 @@
     <div class="wthree-news-top-left">
         <div class="col-md-12 w3-agileits-news-left">
             <div class="col-sm-5 wthree-news-img">
-                <a href="news-single.html"><img src="~/images/m1.jpg" alt="" /></a>
+                <a href="@Url.Action("Read","News", new { id = item.NewsId})"><img src="~/images/news.jpg" alt="" /></a>
             </div>
 
             <div class="col-sm-7 wthree-news-info">
@@ -13,10 +13,10 @@
                 @{
                     string[] strCut = item.Content.Split('.');
                 }
-                <p>@strCut[0] .</p>
+                <p>@strCut[0]</p>
                 <ul>
-                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>@item.CreatedDate</li>
-                    <li><i class="fa fa-eye" aria-hidden="true"></i>2642 lượt View</li>
+                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>@item.CreatedDate.Value.ToShortDateString()</li>
+                    @*<li><i class="fa fa-eye" aria-hidden="true"></i>2642 lượt View</li>*@
                 </ul>
             </div>
             <div class="clearfix"> </div>

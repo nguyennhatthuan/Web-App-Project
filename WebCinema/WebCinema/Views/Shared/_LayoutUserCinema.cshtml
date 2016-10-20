@@ -15,7 +15,7 @@
         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
                function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- //for-mobile-apps -->
-    <link href="~/Content/styleMovie.css" rel="stylesheet" type="text/css" media=""/>
+    <link href="~/Content/styleMovie.css" rel="stylesheet" type="text/css" media="" />
     <!--Thuấn-->
     <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -130,38 +130,38 @@
                             @*<li><a href="series.html">tv - series</a></li>*@
                             <li><a href="@Url.Action("Index", "News")">Tin Tức</a></li>
                             @*<li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Country <b class="caret"></b></a>
-                                <ul class="dropdown-menu multi-column columns-3">
-                                    <li>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="genres.html">Asia</a></li>
-                                                <li><a href="genres.html">France</a></li>
-                                                <li><a href="genres.html">Taiwan</a></li>
-                                                <li><a href="genres.html">United States</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="genres.html">China</a></li>
-                                                <li><a href="genres.html">HongCong</a></li>
-                                                <li><a href="genres.html">Japan</a></li>
-                                                <li><a href="genres.html">Thailand</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="genres.html">Euro</a></li>
-                                                <li><a href="genres.html">India</a></li>
-                                                <li><a href="genres.html">Korea</a></li>
-                                                <li><a href="genres.html">United Kingdom</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="short-codes.html">Short Codes</a></li>*@
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Country <b class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-column columns-3">
+                                        <li>
+                                            <div class="col-sm-4">
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a href="genres.html">Asia</a></li>
+                                                    <li><a href="genres.html">France</a></li>
+                                                    <li><a href="genres.html">Taiwan</a></li>
+                                                    <li><a href="genres.html">United States</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a href="genres.html">China</a></li>
+                                                    <li><a href="genres.html">HongCong</a></li>
+                                                    <li><a href="genres.html">Japan</a></li>
+                                                    <li><a href="genres.html">Thailand</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a href="genres.html">Euro</a></li>
+                                                    <li><a href="genres.html">India</a></li>
+                                                    <li><a href="genres.html">Korea</a></li>
+                                                    <li><a href="genres.html">United Kingdom</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="short-codes.html">Short Codes</a></li>*@
                             <li><a href="@Url.Action("Contact", "Cinema")">Liên Hệ</a></li>
                         </ul>
                     </nav>
@@ -187,7 +187,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 w3ls_footer_grid_right">
-                    <a href="index.html"><h2>WAT<span>Movies</span></h2></a>
+                    <a href="@Url.Action("Index","Cinema")"><h2>WAT<span>Movies</span></h2></a>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -196,26 +196,20 @@
             </div>
             <div class="col-md-7 w3ls_footer_grid1_right">
                 <ul>
+                    @*<li>
+                            <a href="genres.html">Movies</a>
+                        </li>*@
                     <li>
-                        <a href="genres.html">Movies</a>
+                        <a href="@Url.Action("Genre","Movie",new { Id=4 })">Hành Động</a>
                     </li>
                     <li>
-                        <a href="faq.html">FAQ</a>
+                        <a href="@Url.Action("Genre","Movie",new { Id=1 })">Phiêu Lưu</a>
                     </li>
                     <li>
-                        <a href="horror.html">Action</a>
+                        <a href="@Url.Action("Genre","Movie",new { Id=2 })">Hài Kịch</a>
                     </li>
                     <li>
-                        <a href="genres.html">Adventure</a>
-                    </li>
-                    <li>
-                        <a href="comedy.html">Comedy</a>
-                    </li>
-                    <li>
-                        <a href="icons.html">Icons</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="@Url.Action("Contact","Cinema")">Liên Hệ Chúng Tôi</a>
                     </li>
                 </ul>
             </div>

@@ -23,6 +23,7 @@ namespace WebCinema.Models.DataAccess
             foreach (var item in movieTypes)
             {
                 MovieGenre g = new MovieGenre();
+                g.MovieId = item.MovieId;
                 g.MovieName = item.Name;
                 g.MoviePoster = item.Poster;
                 g.ReleaseDate = item.ReleaseDate;

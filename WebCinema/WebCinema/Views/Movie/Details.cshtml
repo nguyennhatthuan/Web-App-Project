@@ -8,6 +8,7 @@
     UserAccount User = Session["Account"] as UserAccount;
     if (Session["Account"] != null) { ViewBag.ThongBao = "Chào " + User.UserName + "!"; } else { ViewBag.ThongBao = "Đăng Nhập"; }
 }
+<html xmlns:fb='http://www.facebook.com/2008/fbml'>
 <head>
     <title>One Movies an Entertainment Category Flat Bootstrap Responsive Website Template | Single :: w3layouts</title>
     <!-- for-mobile-apps -->
@@ -75,14 +76,32 @@
     </script>
     <style>
         .bahubali-details p {
-            color:#0094ff;
-            font-weight:bold;
-            font-size:16px;
+            color: #0094ff;
+            font-weight: bold;
+            font-size: 16px;
         }
     </style>
+    <meta property="fb:app_id" content="321176034908035" />
 </head>
 
 <body>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '321176034908035',
+                xfbml: true,
+                version: 'v2.7'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- header -->
     <div class="header">
         <div class="container">
@@ -116,60 +135,19 @@
     <!-- //header -->
     <!-- bootstrap-pop-up -->
     @Html.Action("_PartialLogin", "Cinema")
-    @*<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    Sign In & Sign Up
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <section>
-                    <div class="modal-body">
-                        <div class="w3_login_module">
-                            <div class="module form-module">
-                                <div class="toggle">
-                                    <i class="fa fa-times fa-pencil"></i>
-                                    <div class="tooltip">Click Me</div>
-                                </div>
-                                <div class="form">
-                                    <h3>Login to your account</h3>
-                                    <form action="#" method="post">
-                                        <input type="text" name="Username" placeholder="Username" required="">
-                                        <input type="password" name="Password" placeholder="Password" required="">
-                                        <input type="submit" value="Login">
-                                    </form>
-                                </div>
-                                <div class="form">
-                                    <h3>Create an account</h3>
-                                    <form action="#" method="post">
-                                        <input type="text" name="Username" placeholder="Username" required="">
-                                        <input type="password" name="Password" placeholder="Password" required="">
-                                        <input type="email" name="Email" placeholder="Email Address" required="">
-                                        <input type="text" name="Phone" placeholder="Phone Number" required="">
-                                        <input type="submit" value="Register">
-                                    </form>
-                                </div>
-                                <div class="cta"><a href="#">Forgot your password?</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>*@
     @*<script>
-        $('.toggle').click(function () {
-            // Switches the Icon
-            $(this).children('i').toggleClass('fa-pencil');
-            // Switches the forms
-            $('.form').animate({
-                height: "toggle",
-                'padding-top': 'toggle',
-                'padding-bottom': 'toggle',
-                opacity: "toggle"
-            }, "slow");
-        });
-    </script>*@
+            $('.toggle').click(function () {
+                // Switches the Icon
+                $(this).children('i').toggleClass('fa-pencil');
+                // Switches the forms
+                $('.form').animate({
+                    height: "toggle",
+                    'padding-top': 'toggle',
+                    'padding-bottom': 'toggle',
+                    opacity: "toggle"
+                }, "slow");
+            });
+        </script>*@
     <!-- //bootstrap-pop-up -->
     <!-- nav -->
     <div class="movies_nav">
@@ -192,42 +170,9 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thể Loại <b class="caret"></b></a>
                                 @Html.Action("_PartialGetGenre", "Cinema")
                             </li>
-                            <li><a href="series.html">tv - series</a></li>
+                            @*<li><a href="series.html">tv - series</a></li>*@
                             <li><a href="@Url.Action("Index", "News")">Tin Tức</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Country <b class="caret"></b></a>
-                                <ul class="dropdown-menu multi-column columns-3">
-                                    <li>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="genres.html">Asia</a></li>
-                                                <li><a href="genres.html">France</a></li>
-                                                <li><a href="genres.html">Taiwan</a></li>
-                                                <li><a href="genres.html">United States</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="genres.html">China</a></li>
-                                                <li><a href="genres.html">HongCong</a></li>
-                                                <li><a href="genres.html">Japan</a></li>
-                                                <li><a href="genres.html">Thailand</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="genres.html">Euro</a></li>
-                                                <li><a href="genres.html">India</a></li>
-                                                <li><a href="genres.html">Korea</a></li>
-                                                <li><a href="genres.html">United Kingdom</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="short-codes.html">Short Codes</a></li>
-                            <li><a href="list.html">A - z list</a></li>
+                            <li><a href="@Url.Action("Contact", "Cinema")">Liên Hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -251,7 +196,7 @@
             <!-- /w3l-medile-movies-grids -->
             <div class="agileits-single-top">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="@Url.Action("Index","Cinema")">Trang Chủ</a></li>
                     <li class="active">Chi Tiết</li>
                 </ol>
             </div>
@@ -274,7 +219,7 @@
                                 <div class="movie-ticket-book">
                                     <div class="clearfix"></div>
                                     <div class="bahubali-details">
-                                        <h4>Ngày ra mắt: </h4><p>@Model.ReleaseDate</p>
+                                        <h4>Ngày ra mắt: </h4><p>@Model.ReleaseDate.Value.ToShortDateString()</p>
                                         <h4>Thời lượng: </h4><p>@Model.Length_</p>
                                         <h4>Đạo diễn: </h4><p>@Model.Director</p>
                                         <h4>Ngôn ngữ: </h4><p>@Model.Language_</p>
@@ -285,6 +230,7 @@
                             </div>
                             @Html.Action("_PartialShowTime", new { Id = Model.MovieId })
                             <div class="clearfix"></div>
+                            <div class="fb-comments" data-href=http://watcinema.somee.com/Movie/Detail/"+@Model.MovieId data-colorscheme="light" data-numposts="10" data-width="750"></div>
                         </div>
                         <!-- End Thuấn -->
                     </div>
@@ -302,7 +248,7 @@
             <div class="w3ls_footer_grid">
                 <div class="col-md-6 w3ls_footer_grid_left">
                     <div class="w3ls_footer_grid_left1">
-                        <h2>Subscribe to us</h2>
+                        <h2>Subscribe Chúng Tôi</h2>
                         <div class="w3ls_footer_grid_left1_pos">
                             <form action="#" method="post">
                                 <input type="email" name="email" placeholder="Your email..." required="">
@@ -312,7 +258,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 w3ls_footer_grid_right">
-                    <a href="index.html"><h2>One<span>Movies</span></h2></a>
+                    <a href="@Url.Action(" Index","Cinema")"><h2>One<span>Movies</span></h2></a>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -321,26 +267,23 @@
             </div>
             <div class="col-md-7 w3ls_footer_grid1_right">
                 <ul>
+                    @*<li>
+                            <a href="genres.html">Movies</a>
+                        </li>*@
                     <li>
-                        <a href="genres.html">Movies</a>
+                        <a href="genres.html"></a>
                     </li>
                     <li>
-                        <a href="faq.html">FAQ</a>
+                        <a href="@Url.Action("Genre","Movie",new { Id=4 })">Hành Động</a>
                     </li>
                     <li>
-                        <a href="horror.html">Action</a>
+                        <a href="@Url.Action("Genre","Movie",new { Id=1 })">Phiêu Lưu</a>
                     </li>
                     <li>
-                        <a href="genres.html">Adventure</a>
+                        <a href="@Url.Action("Genre","Movie",new { Id=2 })">Hài Kịch</a>
                     </li>
                     <li>
-                        <a href="comedy.html">Comedy</a>
-                    </li>
-                    <li>
-                        <a href="icons.html">Icons</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="@Url.Action("Contact","Cinema")">Liên Hệ Chúng Tôi</a>
                     </li>
                 </ul>
             </div>
@@ -381,7 +324,7 @@
 
         });
 
-        
+
     </script>
     <!-- //here ends scrolling icon -->
 </body>

@@ -280,6 +280,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MovieGenre.cs" />
+    <Compile Include="Models\RSSModel.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -886,7 +887,7 @@
     <Content Include="images\Movies\TheMazeRunnerTheDeathCure.jpg" />
     <Content Include="images\Movies\ToiLaBeTo.jpg" />
     <Content Include="images\Movies\UnderworldBloodWars.jpg" />
-    <Content Include="images\Movies\Warforthe lanetoftheApes.jpg" />
+    <Content Include="images\Movies\WarForThePlanetOfTheApes.jpg" />
     <Content Include="images\Movies\xxxreturnofxandercage.jpg" />
     <Content Include="images\n1.jpg" />
     <Content Include="images\n10.jpg" />
@@ -901,6 +902,7 @@
     <Content Include="images\n9.jpg" />
     <Content Include="images\new.gif" />
     <Content Include="images\new.png" />
+    <Content Include="images\news.jpg" />
     <Content Include="images\news1.jpg" />
     <Content Include="images\play-button.png" />
     <Content Include="images\user.jpg" />
@@ -1166,6 +1168,7 @@
     <Content Include="Views\Cinema\_PartialFeatureFilm.cshtml" />
     <Content Include="Views\Cinema\_PartialRecentlyAdded.cshtml" />
     <Content Include="Views\Cinema\Contact.cshtml" />
+    <Content Include="Views\News\_PartialMovieNews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

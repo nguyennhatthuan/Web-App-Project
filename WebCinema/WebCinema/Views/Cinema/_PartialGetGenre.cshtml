@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<WebCinema.Models.Cinema.TypeOfMovie>
 <ul class="dropdown-menu multi-column columns-3">
     <li>
-        @foreach (var item in Model.Take(4))
+        @foreach (var item in Model.Take(5))
         {
             <div class="col-sm-4">
                 <ul class="multi-column-dropdown">
@@ -9,7 +9,7 @@
                 </ul>
             </div>
         }
-        @foreach (var item in Model.Skip(4).Take(4))
+        @foreach (var item in Model.Skip(5).Take(5))
         {
             <div class="col-sm-4">
                 <ul class="multi-column-dropdown">
@@ -17,7 +17,7 @@
                 </ul>
             </div>
         }
-        @foreach (var item in Model.Skip(8).Take(4))
+        @foreach (var item in Model.Skip(10).Take(5))
         {
             <div class="col-sm-4">
                 <ul class="multi-column-dropdown">

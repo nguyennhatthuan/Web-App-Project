@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using WebCinema.Models.Cinema;
 using WebCinema.Models.DataAccess;
+using WebCinema.Models;
+using System.Configuration;
 
 namespace WebCinema.Controllers
 {
@@ -19,15 +21,24 @@ namespace WebCinema.Controllers
 
         public ActionResult _PartialTopNews()
         {
-            var News = db.News.OrderByDescending(p => p.CreatedDate).Take(6).ToList();
-            return PartialView(News);
+            LoadRRSvnexpress rss = new LoadRRSvnexpress(ConfigurationManager.AppSettings["urlvnexpress"]);
+            ViewBag.title = rss.title;
+            ViewBag.description = rss.description;
+            ViewBag.link = rss.link;
+            ViewBag.data = rss.items;
+            return PartialView();
         }
 
-        // 2 Action trên là 2 Partial tách ra để gắn vào trang Index, ShowNews dùng để hiện các tin tức của Lastest News
-        // TopNews là Partial để hiện cái khung bên phải
-        // Ngoài ra còn thẻ Movie News nữa, chưa chỉnh, cái đó từ từ :))
-        // Chú làm cái Read là OK :v
-
+        public ActionResult _PartialMovieNews()
+        {
+            LoadRRS24h rss = new LoadRRS24h(ConfigurationManager.AppSettings["url24h"]);
+            ViewBag.title = rss.title;
+            ViewBag.description = rss.description;
+            ViewBag.language = rss.language;
+            ViewBag.link = rss.link;
+            ViewBag.data = rss.items;
+            return PartialView();
+        }
 
         // GET: News
         public ActionResult Index()

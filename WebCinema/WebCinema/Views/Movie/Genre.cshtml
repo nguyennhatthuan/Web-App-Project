@@ -9,7 +9,7 @@
         <div class="container">
             <div class="agileits-single-top">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="@Url.Action("Index","Cinema")">Trang Chủ</a></li>
                     <li class="active">Thể Loại</li>
                 </ol>
             </div>
@@ -21,23 +21,21 @@
             {
                 <div class="col-md-2 w3l-movie-gride-agile">
                     <a href="@Url.Action("Details", "Movie", new { id = item.MovieId })" class="hvr-shutter-out-horizontal">
-                        <img src="~/images/Movies/@item.MoviePoster" title="album-name" alt=" " style="width:182px; height:268px;" />
+                        <img src="~/images/Movies/@item.MoviePoster" title="album-name" alt=" " style="width:180px; height:260px;" />
                         <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
                     </a>
                     <div class="mid-1">
                         <div class="w3l-movie-text">
                             <h6><a href="@Url.Action("Details", "Movie", new { id = item.MovieId })">@item.MovieName</a></h6>
+                            <div class="clearfix"> </div>
                         </div>
-                        <div class="mid-2">
-                            <p><center>@item.ReleaseDate.Value.ToShortDateString()</center></p>
-                            <div class="clearfix"></div>
-                        </div>
-
                     </div>
                     <div class="ribben two">
                         <p>NEW</p>
                     </div>
+                    <div class="clearfix"> </div>
                 </div>
+                
             }
             <div class="clearfix"> </div>
         </div>

@@ -1,0 +1,21 @@
+﻿@foreach (var item in ViewBag.data)
+{
+    <div class="wthree-news-top-left">
+        <div class="col-md-12 w3-agileits-news-left">
+            @*<div class="col-sm-5 wthree-news-img">
+                <a href="@item.link"><img src="images/m17.jpg" alt="" /></a>
+            </div>*@
+            <div class="col-sm-12 wthree-news-info">
+                <h3><a href="@item.link">@item.title</a></h3>
+                <p>@Html.Raw(item.description)</p>
+                <ul>
+                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>@item.pubDate</li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+        <div class="clearfix"> </div>
+    </div>
+}
+

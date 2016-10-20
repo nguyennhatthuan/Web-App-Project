@@ -1,20 +1,21 @@
-﻿@model IEnumerable<WebCinema.Models.Cinema.News>
-
-<div class="news-right-bottom-bg">
+﻿<div class="news-right-bottom-bg">
     <div class="news-grids-bottom">
-        @foreach (var item in Model)
-        {
-            <div class="top-news-grid">
-                <div class="top-news-grid-heading">
-                    <a href="@Url.Action("Read","News", new { id = item.NewsId})">@item.Title</a>
-                </div>
-                <div class="w3ls-news-t-grid top-t-grid">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-clock-o"></i> 1h</a></li>
-                        <li><a href="#"><i class="fa fa-user"></i> Vivamus nibh</a></li>
-                    </ul>
-                </div>
+        @*<div id="lblTitle" class="rssTitle">@ViewBag.title</div>
+        <div id="lblDescription">@ViewBag.description</div>
+        <div id=link><a href="@ViewBag.link">Chi Tiet</a></div>
+        <br /><br /><br />*@
+        <br />
+        @foreach (var item in ViewBag.data)
+            {
+            <div class="top-news-grid-heading"><a href="@item.link">@item.title</a></div>
+            <div>
+                @Html.Raw(item.description) <a href="@item.link">Xem thêm</a>
             </div>
+            <div>
+                @item.pubDate
+                <br />
+            </div>
+            <br />
         }
     </div>
 </div>

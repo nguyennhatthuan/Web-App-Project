@@ -6,7 +6,7 @@
         <img src="~/images/Movies/@item.Poster" alt="" style="width:1300px; height:500px;">
         <p class='title'>@item.Name</p>
         @{if (item.Description_.Length > 150)
-                {
+            {
                 <p class='description'>
                     @item.Description_.Substring(0, 100)<text>...</text>
                 </p>
@@ -14,7 +14,7 @@
             else
             {
                 <p class='description'>
-                    @item.Description_<text>...</text>
+                    @item.Description_
                 </p>
             }
         }

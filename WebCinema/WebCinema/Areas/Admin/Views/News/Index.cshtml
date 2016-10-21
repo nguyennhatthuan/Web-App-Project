@@ -70,8 +70,8 @@
                                                 @Html.DisplayFor(modelItem => item.Title)
                                             </td>
                                             <td>
-                                                @*@Html.DisplayFor(modelItem => item.Content)*@
-                                                @Html.Raw(item.Content)
+                                                @Html.Raw((item.Content.Length > 100 ? item.Content.Substring(0, 200) : item.Content))<text>...</text>
+                                                 
                                             </td>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.CreatedDate)

@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Đặt vé thành công";
     Layout = "~/Views/Shared/_LayoutUserCinema.cshtml";
 }
@@ -8,4 +7,6 @@
 <h2 style="text-align:center">@ViewBag.Notification</h2>
 <br />
 <br />
+@{ var MaDonHang = "VT" + ViewBag.BillId.ToString();}
+<center><h3>Bạn muốn thanh toán trực tuyến? Mời nhấn vào đây:</h3><a target="_blank" href="https://www.nganluong.vn/button_payment.php?receiver=nhatthuandiend@gmail.com&productname=@MaDonHang&price=@ViewBag.Price&returnurl=watcinema.somee.com"><img src="https://www.nganluong.vn/css/newhome/img/button/pay-lg.png" border="0" /></a></center>
 

@@ -2,6 +2,7 @@
 
 @foreach (var item in Model)
 {
+    string[] strCut = item.Content.Split('.');
     <div class="wthree-news-top-left">
         <div class="col-md-12 w3-agileits-news-left">
             <div class="col-sm-5 wthree-news-img">
@@ -10,9 +11,6 @@
 
             <div class="col-sm-7 wthree-news-info">
                 <h5><a href="@Url.Action("Read","News", new { id = item.NewsId})">@item.Title</a></h5>
-                @{
-                    string[] strCut = item.Content.Split('.');
-                }
                 <p>@strCut[0]</p>
                 <ul>
                     <li><i class="fa fa-clock-o" aria-hidden="true"></i>@item.CreatedDate.Value.ToShortDateString()</li>

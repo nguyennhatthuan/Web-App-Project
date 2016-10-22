@@ -104,6 +104,8 @@ namespace WebCinema.Controllers
         {
             string Notification = "Cám ơn bạn đã mua vé, mã Hóa Đơn của bạn là " + BillId + ". Chúng tôi sẽ liên hệ bạn nhanh nhất có thể.";
             ViewBag.Notification = Notification;
+            ViewBag.BillId = BillId;
+            ViewBag.Price = db.Bills.SingleOrDefault(s => s.BillId == BillId).Price;
             return View();
         }
     }

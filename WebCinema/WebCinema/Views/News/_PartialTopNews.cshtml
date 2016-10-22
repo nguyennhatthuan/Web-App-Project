@@ -1,21 +1,41 @@
-﻿<div class="news-right-bottom-bg">
-    <div class="news-grids-bottom">
-        @*<div id="lblTitle" class="rssTitle">@ViewBag.title</div>
-        <div id="lblDescription">@ViewBag.description</div>
-        <div id=link><a href="@ViewBag.link">Chi Tiet</a></div>
-        <br /><br /><br />*@
-        <br />
-        @foreach (var item in ViewBag.data)
-            {
-            <div class="top-news-grid-heading"><a href="@item.link">@item.title</a></div>
-            <div>
-                @Html.Raw(item.description) <a href="@item.link">Xem thêm</a>
-            </div>
-            <div>
-                @item.pubDate
+﻿<div class="col-md-4 wthree-news-right">
+    <!-- news-right-bottom -->
+    <div class="news-right-top">
+        <div class="wthree-news-right-heading">
+            <h3>VNExpress</h3>
+        </div>
+        <div class="wthree-news-right-top">
+            <div class="news-grids-bottom">
+                @*<div id="lblTitle" class="rssTitle">@ViewBag.title</div>
+                    <div id="lblDescription">@ViewBag.description</div>
+                    <div id=link><a href="@ViewBag.link">Chi Tiet</a></div>
+                    <br /><br /><br />*@
                 <br />
+                @*<div id="design" class="date">
+                        <div id="cycler">
+                            <div class="date-text">
+                                <a href="@item.link">@item.title</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>*@
+                @foreach (var item in ViewBag.data)
+                {
+                    <div class="top-news-grid-heading"><a href="@item.link">@item.title</a></div>
+                    <div>
+                        @Html.Raw(item.description) <a href="@item.link">Xem thêm</a>
+                    </div>
+                    <div>
+                        @item.pubDate
+                        <br />
+                    </div>
+                    <br />
+                }
             </div>
-            <br />
-        }
+
+
+
+        </div>
     </div>
+    <!-- //news-right-bottom -->
 </div>

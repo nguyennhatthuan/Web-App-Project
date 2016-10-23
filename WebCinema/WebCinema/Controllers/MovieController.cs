@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using WebCinema.Models.DataAccess;
 using WebCinema.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace WebCinema.Controllers
 {
@@ -36,12 +38,14 @@ namespace WebCinema.Controllers
             return PartialView(showTime);
         }
 
-        public ActionResult Genre(int Id)
+        public ActionResult Genre(int Id, int? page)
         {
+            int pageNumber = (page ?? 1);
+            int pageSize = 12;
             MovieGenreDAO genre = new MovieGenreDAO();
             List<MovieGenre> Movies = genre.GetMovieByGenre(Id);
             ViewBag.GenreName = genre.GetGenreName(Id);
-            return View(Movies);
+            return View(Movies.ToPagedList(pageNumber,pageSize));
         }
 
         public ActionResult _PartialRandomMovie()

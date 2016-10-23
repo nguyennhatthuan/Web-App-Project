@@ -1,4 +1,6 @@
-﻿@model IEnumerable<WebCinema.Models.MovieGenre>
+﻿@*@model IEnumerable<WebCinema.Models.MovieGenre>*@
+@model PagedList.PagedList<WebCinema.Models.MovieGenre>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Thể Loại";
     Layout = "~/Views/Shared/_LayoutUserCinema.cshtml";
@@ -19,7 +21,7 @@
         </div>
         <div class="container">
             <div class="browse-inner">
-                @foreach (var item in Model)
+                @foreach (var item in Model.Take(6))
                 {
                     <div class="col-md-2 w3l-movie-gride-agile">
                         <a href="@Url.Action("Details", "Movie", new { id = item.MovieId })" class="hvr-shutter-out-horizontal">
@@ -41,8 +43,8 @@
                 <div class="clearfix"> </div>
             </div>
             <!-- /latest-movies1 -->
-            @*<div class="browse-inner-come-agile-w3">
-                @foreach (var item in Model)
+            <div class="browse-inner-come-agile-w3">
+                @foreach (var item in Model.Skip(6).Take(6))
                 {
                     <div class="col-md-2 w3l-movie-gride-agile">
                         <a href="@Url.Action("Details", "Movie", new { id = item.MovieId })" class="hvr-shutter-out-horizontal">
@@ -62,7 +64,13 @@
                     </div>
                 }
                 <div class="clearfix"> </div>
-            </div>*@
+            </div>
+
+            <div class="blog-pagenat-wthree">
+                <ul>
+                    <li>@Html.PagedListPager(Model, page => Url.Action("Genre", new { page = page }))</li>
+                </ul>
+            </div>
             @Html.Action("_PartialRandomMovie", "Movie")
         </div>
     </div>

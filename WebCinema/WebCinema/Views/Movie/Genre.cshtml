@@ -1,45 +1,79 @@
-﻿@model IEnumerable<WebCinema.Models.MovieGenre>
+﻿@*@model IEnumerable<WebCinema.Models.MovieGenre>*@
+@model PagedList.PagedList<WebCinema.Models.MovieGenre>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Thể Loại";
     Layout = "~/Views/Shared/_LayoutUserCinema.cshtml";
 }
-<div class="browse-agile-w3ls general-w3ls">
-    <div class="tittle-head">
-        <h4 class="latest-text">@ViewBag.GenreName </h4>
-        <div class="container">
-            <div class="agileits-single-top">
-                <ol class="breadcrumb">
-                    <li><a href="@Url.Action("Index","Cinema")">Trang Chủ</a></li>
-                    <li class="active">Thể Loại</li>
-                </ol>
+
+<div class="movie-browse-agile">
+    <div class="browse-agile-w3ls general-w3ls">
+        <div class="tittle-head">
+            <h4 class="latest-text">@ViewBag.GenreName </h4>
+            <div class="container">
+                <div class="agileits-single-top">
+                    <ol class="breadcrumb">
+                        <li><a href="@Url.Action("Index","Cinema")">Trang Chủ</a></li>
+                        <li class="active">Thể Loại</li>
+                    </ol>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="browse-inner">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-2 w3l-movie-gride-agile">
-                    <a href="@Url.Action("Details", "Movie", new { id = item.MovieId })" class="hvr-shutter-out-horizontal">
-                        <img src="~/images/Movies/@item.MoviePoster" title="album-name" alt=" " style="width:180px; height:260px;" />
-                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-                    </a>
-                    <div class="mid-1">
-                        <div class="w3l-movie-text">
-                            <h6><a href="@Url.Action("Details", "Movie", new { id = item.MovieId })">@item.MovieName</a></h6>
-                            <div class="clearfix"> </div>
+        <div class="container">
+            <div class="browse-inner">
+                @foreach (var item in Model.Take(6))
+                {
+                    <div class="col-md-2 w3l-movie-gride-agile">
+                        <a href="@Url.Action("Details", "Movie", new { id = item.MovieId })" class="hvr-shutter-out-horizontal">
+                            <img src="~/images/Movies/@item.MoviePoster" title="album-name" alt=" " style="width:180px; height:260px;" />
+                            <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="mid-1">
+                            <div class="w3l-movie-text">
+                                <h6><a href="@Url.Action("Details", "Movie", new { id = item.MovieId })">@item.MovieName</a></h6>
+                                <div class="clearfix"> </div>
+                            </div>
                         </div>
+                        <div class="ribben two">
+                            <p>NEW</p>
+                        </div>
+                        <div class="clearfix"> </div>
                     </div>
-                    <div class="ribben two">
-                        <p>NEW</p>
+                }
+                <div class="clearfix"> </div>
+            </div>
+            <!-- /latest-movies1 -->
+            <div class="browse-inner-come-agile-w3">
+                @foreach (var item in Model.Skip(6).Take(6))
+                {
+                    <div class="col-md-2 w3l-movie-gride-agile">
+                        <a href="@Url.Action("Details", "Movie", new { id = item.MovieId })" class="hvr-shutter-out-horizontal">
+                            <img src="~/images/Movies/@item.MoviePoster" title="album-name" alt=" " style="width:180px; height:260px;" />
+                            <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="mid-1">
+                            <div class="w3l-movie-text">
+                                <h6><a href="@Url.Action("Details", "Movie", new { id = item.MovieId })">@item.MovieName</a></h6>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                        <div class="ribben two">
+                            <p>NEW</p>
+                        </div>
+                        <div class="clearfix"> </div>
                     </div>
-                    <div class="clearfix"> </div>
-                </div>
-                
-            }
-            <div class="clearfix"> </div>
+                }
+                <div class="clearfix"> </div>
+            </div>
+
+            <div class="blog-pagenat-wthree">
+                <ul>
+                    <li>@Html.PagedListPager(Model, page => Url.Action("Genre", new { page = page }))</li>
+                </ul>
+            </div>
+            @Html.Action("_PartialRandomMovie", "Movie")
         </div>
-        <!-- /latest-movies1 -->
-        @Html.Action("_PartialRandomMovie", "Movie")
     </div>
 </div>
+
+

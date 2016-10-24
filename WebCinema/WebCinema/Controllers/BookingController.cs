@@ -20,8 +20,7 @@ namespace WebCinema.Controllers
         {
             if (Session["Account"] == null || Session["Account"].ToString() == "")
             {
-                return RedirectToAction("_PartialLogin", "Cinema");
-                // gọi sự kiện OnClick bên Javasctipt
+                return RedirectToAction("Login", "Cinema");
             }
             var ShowTimeId = int.Parse(STId);
             var Show = db.ShowTimes.SingleOrDefault(s => s.ShowTimeId == ShowTimeId);

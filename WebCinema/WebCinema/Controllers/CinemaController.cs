@@ -114,5 +114,17 @@ namespace WebCinema.Controllers
             userDAO.AddFeedback(fb);
             return RedirectToAction("Index");
         }
+
+        public ActionResult Login()
+        {
+            if (Session["Account"] != null || Session["Account"].ToString() != "") return Redirect("/");
+            return View();
+        }
+
+        public ActionResult SignOut()
+        {
+            Session["Account"] = null;
+            return Redirect("/");
+        }
     }
 }

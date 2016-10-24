@@ -24,8 +24,8 @@
     <link href="~/Content/css/single.css" rel='stylesheet' type='text/css' />
     <link href="~/Content/css/medile.css" rel='stylesheet' type='text/css' />
     <link href="~/Content/css/news.css" rel="stylesheet" />
-    <link href="~/Content/news-css/news.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="~/Content/list-css/list.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="~/Content/news-css/news.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/list-css/list.css" rel="stylesheet" type="text/css" media="all" />
     <!-- banner-slider -->
     <link href="~/Content/css/jquery.slidey.min.css" rel="stylesheet" />
     <!-- //banner-slider -->
@@ -76,7 +76,7 @@
     <div class="header">
         <div class="container">
             <div class="w3layouts_logo">
-                <a href="@Url.Action("Index", "Cinema")"><h1>WAT<span>Movies</span></h1></a>
+                <a href="@Url.Action(" Index", "Cinema" )"><h1>WAT<span>Movies</span></h1></a>
             </div>
             <div class="w3_search">
                 <form action="#" method="post">
@@ -88,16 +88,18 @@
                 <ul>
                     <li><i class="fa fa-phone" aria-hidden="true"></i> (+84) 1698 681 685</li>
                     @{
-                        if (Session["Account"] != null)
-                        {
-                            <li><a href="#" data-toggle="modal">@ViewBag.ThongBao</a></li>
-                        }
-                        else
-                        {
-                            <li><a href="#" data-toggle="modal" data-target="#myModal">@ViewBag.ThongBao</a></li>
-                        }
+                    if (Session["Account"] != null)
+                    {
+                    <li><a href="#" data-toggle="modal">@ViewBag.ThongBao</a></li>
+                        <a href="@Url.Action("SignOut","Cinema")" class="btn btn-group-vertical btn-default">Đăng Xuất</a>
+                    }
+                    else
+                    {
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">@ViewBag.ThongBao</a></li>
+                    }
                     }
                 </ul>
+
             </div>
             <div class="clearfix"> </div>
         </div>
@@ -122,47 +124,49 @@
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav>
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="@Url.Action("Index","Cinema")">Trang Chủ</a></li>
+                            <li class="active"><a href="@Url.Action(" Index","Cinema")">Trang Chủ</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thể Loại <b class="caret"></b></a>
                                 @Html.Action("_PartialGetGenre", "Cinema")
                             </li>
-                            @*<li><a href="series.html">tv - series</a></li>*@
-                            <li><a href="@Url.Action("Index", "News")">Tin Tức</a></li>
-                            @*<li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Country <b class="caret"></b></a>
-                                    <ul class="dropdown-menu multi-column columns-3">
-                                        <li>
-                                            <div class="col-sm-4">
-                                                <ul class="multi-column-dropdown">
-                                                    <li><a href="genres.html">Asia</a></li>
-                                                    <li><a href="genres.html">France</a></li>
-                                                    <li><a href="genres.html">Taiwan</a></li>
-                                                    <li><a href="genres.html">United States</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <ul class="multi-column-dropdown">
-                                                    <li><a href="genres.html">China</a></li>
-                                                    <li><a href="genres.html">HongCong</a></li>
-                                                    <li><a href="genres.html">Japan</a></li>
-                                                    <li><a href="genres.html">Thailand</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <ul class="multi-column-dropdown">
-                                                    <li><a href="genres.html">Euro</a></li>
-                                                    <li><a href="genres.html">India</a></li>
-                                                    <li><a href="genres.html">Korea</a></li>
-                                                    <li><a href="genres.html">United Kingdom</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="short-codes.html">Short Codes</a></li>*@
-                            <li><a href="@Url.Action("Contact", "Cinema")">Liên Hệ</a></li>
+                            @*
+                            <li><a href="series.html">tv - series</a></li>*@
+                            <li><a href="@Url.Action(" Index", "News" )">Tin Tức</a></li>
+                            @*
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Country <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <li>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="genres.html">Asia</a></li>
+                                                <li><a href="genres.html">France</a></li>
+                                                <li><a href="genres.html">Taiwan</a></li>
+                                                <li><a href="genres.html">United States</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="genres.html">China</a></li>
+                                                <li><a href="genres.html">HongCong</a></li>
+                                                <li><a href="genres.html">Japan</a></li>
+                                                <li><a href="genres.html">Thailand</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="genres.html">Euro</a></li>
+                                                <li><a href="genres.html">India</a></li>
+                                                <li><a href="genres.html">Korea</a></li>
+                                                <li><a href="genres.html">United Kingdom</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="short-codes.html">Short Codes</a></li>*@
+                            <li><a href="@Url.Action(" Contact", "Cinema" )">Liên Hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -187,7 +191,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 w3ls_footer_grid_right">
-                    <a href="@Url.Action("Index","Cinema")"><h2>WAT<span>Movies</span></h2></a>
+                    <a href="@Url.Action(" Index","Cinema")"><h2>WAT<span>Movies</span></h2></a>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -196,20 +200,21 @@
             </div>
             <div class="col-md-7 w3ls_footer_grid1_right">
                 <ul>
-                    @*<li>
-                            <a href="genres.html">Movies</a>
-                        </li>*@
+                    @*
                     <li>
-                        <a href="@Url.Action("Genre","Movie",new { Id=4 })">Hành Động</a>
+                        <a href="genres.html">Movies</a>
+                    </li>*@
+                    <li>
+                        <a href="@Url.Action(" Genre","Movie",new { Id=4 })">Hành Động</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Genre","Movie",new { Id=1 })">Phiêu Lưu</a>
+                        <a href="@Url.Action(" Genre","Movie",new { Id=1 })">Phiêu Lưu</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Genre","Movie",new { Id=2 })">Hài Kịch</a>
+                        <a href="@Url.Action(" Genre","Movie",new { Id=2 })">Hài Kịch</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Contact","Cinema")">Liên Hệ Chúng Tôi</a>
+                        <a href="@Url.Action(" Contact","Cinema")">Liên Hệ Chúng Tôi</a>
                     </li>
                 </ul>
             </div>
@@ -255,7 +260,7 @@
 
     <!--Facebook live chat-->
     <div id="fb-root"></div>
-    <script>$(document).ready(function() {var raido = $(".wrap").attr("data-toggle");if(raido==1){$(".mnv-tuvan").css("display","none");$(".x").click(function(){$(".wrap").slideToggle();$(".mnv-tuvan").slideToggle();});$(".mnv-tuvan").click(function(){$(".wrap").slideToggle();$(this).slideToggle();}); }else{$(".wrap").css("display","none");$(".x").click(function(){$(".wrap").slideToggle();$(".mnv-tuvan").slideToggle();});$(".mnv-tuvan").click(function(){$(".wrap").slideToggle();$(this).slideToggle();});}}) (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5&appId=887080981367835";fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));</script>
+    <script>$(document).ready(function () { var raido = $(".wrap").attr("data-toggle"); if (raido == 1) { $(".mnv-tuvan").css("display", "none"); $(".x").click(function () { $(".wrap").slideToggle(); $(".mnv-tuvan").slideToggle(); }); $(".mnv-tuvan").click(function () { $(".wrap").slideToggle(); $(this).slideToggle(); }); } else { $(".wrap").css("display", "none"); $(".x").click(function () { $(".wrap").slideToggle(); $(".mnv-tuvan").slideToggle(); }); $(".mnv-tuvan").click(function () { $(".wrap").slideToggle(); $(this).slideToggle(); }); } })(function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5&appId=887080981367835"; fjs.parentNode.insertBefore(js, fjs); }(document, "script", "facebook-jssdk"));</script>
     <style>
         .wrap {
             position: fixed;

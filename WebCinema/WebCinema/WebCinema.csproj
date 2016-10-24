@@ -785,6 +785,9 @@
     <Content Include="Content\list-css\basictable.css" />
     <Content Include="Content\list-css\list.css" />
     <Content Include="Content\list-css\table-style.css" />
+    <Content Include="Content\Login\css\reset.css" />
+    <Content Include="Content\Login\css\style.css" />
+    <Content Include="Content\Login\js\index.js" />
     <Content Include="Content\news-css\news.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\styleMovie.css" />
@@ -1089,6 +1092,7 @@
     <Content Include="Areas\Admin\Content\vendor\font-awesome\scss\_spinning.scss" />
     <Content Include="Areas\Admin\Content\vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="Areas\Admin\Content\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\Login\scss\style.scss" />
     <None Include="Properties\PublishProfiles\WATCinema.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -1169,6 +1173,7 @@
     <Content Include="Views\Cinema\_PartialRecentlyAdded.cshtml" />
     <Content Include="Views\Cinema\Contact.cshtml" />
     <Content Include="Views\News\_PartialMovieNews.cshtml" />
+    <Content Include="Views\Cinema\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

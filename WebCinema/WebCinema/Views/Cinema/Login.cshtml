@@ -1,0 +1,40 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Nhập</title>
+    <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,200' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/Login/css/reset.css">
+    <link rel="stylesheet" href="~/Content/Login/css/style.css">
+</head>
+<body>
+    @*<div class="menu">
+            <ul class="mainmenu clearfix">
+                <li class="menuitem">Well</li>
+                <li class="menuitem">how</li>
+                <li class="menuitem">about</li>
+                <li class="menuitem">that?</li>
+            </ul>
+        </div>*@
+    @*<button id="findpass">What's the password?</button>*@
+    <div class="form">
+        @using (Html.BeginForm("_PartialLogin", "Cinema", FormMethod.Post))
+        {
+            <div class="forceColor"></div>
+            <div class="topbar">
+                <div class="spanColor"></div>
+                <input type="text" name="Username" class="input" id="username" placeholder="Ten Dang Nhap" required=""/>
+                <input type="password" name="Password" class="input" id="password" placeholder="Mat Khau" required=""/>
+            </div>
+            @*<button class="submit" id="submit">Login</button>*@
+            <input type="submit" class="submit" id="submit" value="Dang Nhap"/>
+        }
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="~/Content/Login/js/index.js"></script>
+</body>
+</html>

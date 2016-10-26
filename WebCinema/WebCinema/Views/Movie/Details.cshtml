@@ -1,6 +1,6 @@
 ﻿@model WebCinema.Models.Cinema.Movie
 @{
-    ViewBag.Title = "Chi Tiết Phim";
+    ViewBag.Title = Model.Name + "WatCinema";
     Layout = "";
 }
 @using WebCinema.Models.Cinema;
@@ -10,7 +10,7 @@
 }
 <html xmlns:fb='http://www.facebook.com/2008/fbml'>
 <head>
-    <title>One Movies an Entertainment Category Flat Bootstrap Responsive Website Template | Single :: w3layouts</title>
+    <title>@ViewBag.Title</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

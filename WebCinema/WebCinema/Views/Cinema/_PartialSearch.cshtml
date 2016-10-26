@@ -1,0 +1,7 @@
+﻿<div class="w3_search">
+    @using (Html.BeginForm("Search", "Cinema", FormMethod.Post)) 
+    {
+        <input type="text" name="searchText" id="searchText" placeholder="Tìm kiếm">
+        <input type="submit" value="Go">
+    }
+</div>

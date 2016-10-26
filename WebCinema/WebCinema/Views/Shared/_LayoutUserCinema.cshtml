@@ -40,6 +40,10 @@
     <!-- //js -->
     <!-- banner-bottom-plugin -->
     <link href="~/Content/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
+
+    <script src="~/Scripts/SearchAutocomplete/jquery-ui.js"></script>
+    <link href="~/Scripts/SearchAutocomplete/jquery-ui.css" rel="stylesheet" />
+
     <script src="~/Scripts/js/owl.carousel.js"></script>
     <script>
         $(document).ready(function () {
@@ -78,12 +82,13 @@
             <div class="w3layouts_logo">
                 <a href="@Url.Action(" Index", "Cinema" )"><h1>WAT<span>Movies</span></h1></a>
             </div>
-            <div class="w3_search">
-                <form action="#" method="post">
-                    <input type="text" name="Search" placeholder="Tìm kiếm" required="">
+            @*<div class="w3_search">
+                <form method="post">
+                    <input type="text" name="searchText" id="searchText" placeholder="Tìm kiếm">
                     <input type="submit" value="Go">
                 </form>
-            </div>
+            </div>*@
+            @Html.Action("_PartialSearch", "Cinema")
             <div class="w3l_sign_in_register">
                 <ul>
                     <li><i class="fa fa-phone" aria-hidden="true"></i> (+84) 1698 681 685</li>
@@ -373,5 +378,12 @@
                     margin-top: 10px;
                 }
     </style><div data-toggle="1" class="wrap" style="position:fixed; width:250px; height: 325px; "><span class="x" style="">X</span><div class="fb-page" data-adapt-container-width="true" data-height="325" data-hide-cover="false" data-href="https://www.facebook.com/WATCinemaFanpage/?__mref=message_bubble" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="250" style="position:relative; z-index:9999999; right:0px; bottom:21px;border-left: 1px solid #fff;border-top: 1px solid #fff;"></div><p class="pxem" style=""><a class="axem" style="" href=" http//web24h.vn/news-14-200/huong-dan-cai-dat-live-chat-fanpage.html" target="_blank">Cài đặt live chat fanpage</a><a class="alogo" style=""><img src="http://pront04.web24h.vn/Uploaded/Members/9558/images/2015/11/logo-web.png" width="27px" height="14px" style="margin-top: 3px"></a></p></div><div class="mnv-tuvan" style="width: 248px;"><p style=" "><a style="">Bạn cần tư vấn ?</a><img src="http://pront04.web24h.vn/Uploaded/Members/9558/images/2015/11/supprt.png"></p></div>
+    <script type="text/javascript">
+        $(function () {
+            $('#searchText').autocomplete({
+                source: '@Url.Action("SearchByName")'
+            });
+        });
+    </script>
 </body>
 </html>

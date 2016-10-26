@@ -126,5 +126,25 @@ namespace WebCinema.Controllers
             Session["Account"] = null;
             return Redirect("/");
         }
+
+        public JsonResult SearchByName(string term)
+        {
+            MovieDbContext db = new MovieDbContext();
+            List<string> movies = db.Movies.Where(x => x.Name.Contains(term)).Select(e => e.Name).ToList();
+            return Json(movies, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult _PartialSearch()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult Search(string searchText)
+        {
+            MovieDbContext db = new MovieDbContext();
+            int MovieId = db.Movies.SingleOrDefault(m => m.Name == searchText).MovieId;
+            return RedirectToAction("Details", "Movie", new { Id = MovieId });
+        }
     }
 }

@@ -82,6 +82,8 @@
         }
     </style>
     <meta property="fb:app_id" content="321176034908035" />
+    <script src="~/Scripts/SearchAutocomplete/jquery-ui.js"></script>
+    <link href="~/Scripts/SearchAutocomplete/jquery-ui.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -108,12 +110,13 @@
             <div class="w3layouts_logo">
                 <a href="@Url.Action("Index", "Cinema")"><h1>WAT<span>Movies</span></h1></a>
             </div>
-            <div class="w3_search">
+            @*<div class="w3_search">
                 <form action="#" method="post">
                     <input type="text" name="Search" placeholder="Tìm kiếm" required="">
                     <input type="submit" value="Go">
                 </form>
-            </div>
+            </div>*@
+            @Html.Action("_PartialSearch", "Cinema")
             <div class="w3l_sign_in_register">
                 <ul>
                     <li><i class="fa fa-phone" aria-hidden="true"></i> (+84) 1698 681 685</li>
@@ -325,6 +328,13 @@
 
     </script>
     <!-- //here ends scrolling icon -->
+    <script type="text/javascript">
+        $(function () {
+            $('#searchText').autocomplete({
+                source: '@Url.Action("SearchByName")'
+            });
+        });
+    </script>
 </body>
 </html>
 

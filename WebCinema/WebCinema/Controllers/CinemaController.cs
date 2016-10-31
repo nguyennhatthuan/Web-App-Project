@@ -142,9 +142,24 @@ namespace WebCinema.Controllers
         [HttpPost]
         public ActionResult Search(string searchText)
         {
-            MovieDbContext db = new MovieDbContext();
-            int MovieId = db.Movies.SingleOrDefault(m => m.Name == searchText).MovieId;
-            return RedirectToAction("Details", "Movie", new { Id = MovieId });
+            try
+            {
+                if (string.IsNullOrEmpty(searchText))
+                {
+                    return RedirectToAction("Index", "Cinema");
+                }
+                else
+                {
+                    MovieDbContext db = new MovieDbContext();
+                    int MovieId = db.Movies.SingleOrDefault(m => m.Name == searchText).MovieId;
+                    return RedirectToAction("Details", "Movie", new { Id = MovieId });
+                }
+            }
+            catch (Exception)
+            {
+                TempData["ErrorMessage"] = "Không có kết quả nào cho "+searchText;
+                return RedirectToAction("Index", "Cinema");
+            }
         }
     }
 }

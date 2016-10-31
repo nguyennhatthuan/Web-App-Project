@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<WebCinema.Models.Cinema.News>
 
-@foreach (var item in Model)
+@foreach (var item in Model.Take(10))
 {
     string[] strcut = item.Content.Split('.');
     <div class="wthree-news-top-left">
@@ -8,7 +8,6 @@
             <div class="col-sm-5 wthree-news-img">
                 <a href="@Url.Action("Read","News", new { id = item.NewsId})"><img src="~/images/news.jpg" alt="" /></a>
             </div>
-
             <div class="col-sm-7 wthree-news-info">
                 <h5><a href="@Url.Action("Read","News", new { id = item.NewsId})">@item.Title</a></h5>
                 <p>

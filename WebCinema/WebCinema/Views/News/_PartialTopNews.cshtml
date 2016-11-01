@@ -21,9 +21,9 @@
                 </div>*@
             @foreach (var item in ViewBag.data)
             {
-                <div class="top-news-grid-heading"><a href="@item.link">@item.title</a></div>
+                <div class="top-news-grid-heading"><a href="@item.link" target="_blank">@item.title</a></div>
                     <div>
-                        @Html.Raw(item.description) <a href="@item.link">Xem thêm</a>
+                        @Html.Raw(item.description) <a href="@item.link" target="_blank">Xem thêm</a>
                     </div>
                     <div>
                         @item.pubDate

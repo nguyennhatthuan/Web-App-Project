@@ -117,7 +117,9 @@ namespace WebCinema.Controllers
 
         public ActionResult Login()
         {
-            if (Session["Account"] != null || Session["Account"].ToString() != "") return Redirect("/");
+            var User = Session["Account"] as UserAccount;
+            if (User != null)
+                return RedirectToAction("Index","Cinema");
             return View();
         }
 

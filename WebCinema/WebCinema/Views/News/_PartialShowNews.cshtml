@@ -6,11 +6,11 @@
     <div class="wthree-news-top-left">
         <div class="col-md-12 w3-agileits-news-left">
             <div class="col-sm-5 wthree-news-img">
-                <a href="@Url.Action("Read","News", new { id = item.NewsId})"><img src="~/images/news.jpg" alt="" /></a>
+                <a href="@Url.Action("Read","News", new { id = item.NewsId})" target="_blank"><img src="~/images/news.jpg" alt="" /></a>
             </div>
 
             <div class="col-sm-7 wthree-news-info">
-                <h5><a href="@Url.Action("Read","News", new { id = item.NewsId})">@item.Title</a></h5>
+                <h5><a href="@Url.Action("Read","News", new { id = item.NewsId})" target="_blank">@item.Title</a></h5>
                 <p>
                     @if(item.Content.Length > 100)
                 {

@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Movie Ticket Booking Widget Flat Responsive Widget Template :: w3layouts</title>
+    <title>Đặt vé phim @ViewBag.MovieName</title>
     <!-- for-mobile-apps -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -51,7 +51,7 @@
                         <input id="MaPhim" name="MaPhim" type="text" value="@ViewBag.MovieId" hidden="hidden">
                         <input id="MaSuat" name="MaSuat" type="text" value="@ViewBag.ShowTimeId" hidden="hidden">
                         <input id="Tien" name="Tien" type="number" hidden="hidden">
-                        <button type="submit" class="checkout-button">Đặt Vé</button>
+                        <button type="submit" class="checkout-button" style="background-color:#0082ff">Đặt Vé</button>
                     }
                     <div id="legend"></div>
                 </div>
@@ -153,7 +153,9 @@
                     return x1 + x2;
                 }
             </script>
+            <a class="checkout-button" href="@Url.Action("Index","Cinema")" style="background-color:#fc3e3e"><center>Hủy Đặt Vé</center></a>
         </div>
+       
         <p class="copy_rights">Đặt vé</p>
     </div>
     <script src="~/Content/Booking/js/jquery.nicescroll.js"></script>

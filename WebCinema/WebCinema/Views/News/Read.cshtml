@@ -12,6 +12,7 @@
             <ol class="breadcrumb">
                 <li><a href="@Url.Action("Index","Cinema")">Trang Chủ</a></li>
                 <li><a href="@Url.Action("Index","News")">Tin Tức</a></li>
+                <li class="active">@Model.Title</li>
             </ol>
         </div>
         <div class="agileinfo-news-top-grids">
@@ -33,7 +34,7 @@
                                             var js, fjs = d.getElementsByTagName(s)[0];
                                             if (d.getElementById(id)) return;
                                             js = d.createElement(s); js.id = id;
-                                            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+                                            //js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
                                             fjs.parentNode.insertBefore(js, fjs);
                                         }(document, 'script', 'facebook-jssdk'));</script>
                                 </li>
@@ -70,37 +71,7 @@
                 </div>
                 <div class="wthree-related-news-left">
                     <h4>Related News</h4>
-                    <div class="wthree-news-top-left">
-                        <div class="col-md-6 w3-agileits-news-left">
-                            <div class="col-sm-5 wthree-news-img">
-                                <a href="news-single.html"><img src="images/m1.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-sm-7 wthree-news-info">
-                                <h5><a href="news-single.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h5>
-                                <p>Sed tristique mattis fermentum. Etiam semper aliquet massa, id tempus massa mattis eget.</p>
-                                <ul>
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 24/09/2016</li>
-                                    <li><i class="fa fa-eye" aria-hidden="true"></i> 2642</li>
-                                </ul>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="col-md-6 w3-agileits-news-left">
-                            <div class="col-sm-5 wthree-news-img">
-                                <a href="news-single.html"><img src="images/m2.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-sm-7 wthree-news-info">
-                                <h5><a href="news-single.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h5>
-                                <p>Sed tristique mattis fermentum. Etiam semper aliquet massa, id tempus massa mattis eget.</p>
-                                <ul>
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 24/09/2016</li>
-                                    <li><i class="fa fa-eye" aria-hidden="true"></i> 2642</li>
-                                </ul>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+                    @Html.Action("_PartialShowNews", "News")
                 </div>
                 <!-- agile-comments -->
                 <div class="agile-news-comments">
@@ -116,258 +87,17 @@
             </div>
             <div class="col-md-4 wthree-news-right">
                 <!-- news-right-bottom -->
-                <div class="news-right-bottom">
-                    <div class="wthree-news-right-heading">
-                        <h3>Top News</h3>
-                    </div>
-                    <div class="news-right-bottom-bg">
-                        <div class="news-grids-bottom">
-                            <div class="top-news-grid">
-                                <div class="top-news-grid-heading">
-                                    <a href="news-single.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum ac nulla</a>
-                                </div>
-                                <div class="w3ls-news-t-grid top-t-grid">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-clock-o"></i> 1h</a></li>
-                                        <li><a href="#"><i class="fa fa-user"></i> Vivamus nibh</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="top-news-grid">
-                                <div class="top-news-grid-heading">
-                                    <a href="news-single.html">Duis orci enim, rutrum vel sodales ut, tincidunt nec turpis.</a>
-                                </div>
-                                <div class="w3ls-news-t-grid top-t-grid">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-clock-o"></i> 3h</a></li>
-                                        <li><a href="#"><i class="fa fa-user"></i> Cras pretium</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="top-news-grid">
-                                <div class="top-news-grid-heading">
-                                    <a href="news-single.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum ac nulla</a>
-                                </div>
-                                <div class="w3ls-news-t-grid top-t-grid">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-clock-o"></i> 1h</a></li>
-                                        <li><a href="#"><i class="fa fa-user"></i> Vivamus nibh</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="top-news-grid">
-                                <div class="top-news-grid-heading">
-                                    <a href="news-single.html">Duis orci enim, rutrum vel sodales ut, tincidunt nec turpis.</a>
-                                </div>
-                                <div class="w3ls-news-t-grid top-t-grid">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-clock-o"></i> 3h</a></li>
-                                        <li><a href="#"><i class="fa fa-user"></i> Cras pretium</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @Html.Action("_PartialTopNews", "News")
                 <!-- //news-right-bottom -->
             </div>
             <div class="clearfix"> </div>
         </div>
     </div>
     <div class="w3l-latest-movies-grids">
-        <h4 class="latest-text w3_latest_text">Latest Movies</h4>
+        <h4 class="latest-text w3_latest_text">Phim mới nhất</h4>
         <div class="container">
             <!-- /latest-movies -->
-            <div class="browse-inner">
-                <div class="col-md-2 w3l-movie-gride-agile">
-                    <a href="single.html" class="hvr-shutter-out-horizontal">
-                        <img src="images/m7.jpg" title="album-name" alt=" " />
-                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-                    </a>
-                    <div class="mid-1">
-                        <div class="w3l-movie-text">
-                            <h6><a href="single.html">Light B/t Oceans</a></h6>
-                        </div>
-                        <div class="mid-2">
-
-                            <p>2016</p>
-                            <div class="block-stars">
-                                <ul class="w3l-ratings">
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-
-
-                                </ul>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-
-                    </div>
-                    <div class="ribben">
-                        <p>NEW</p>
-                    </div>
-                </div>
-                <div class="col-md-2 w3l-movie-gride-agile">
-                    <a href="single.html" class="hvr-shutter-out-horizontal">
-                        <img src="images/m8.jpg" title="album-name" alt=" " />
-                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-                    </a>
-                    <div class="mid-1">
-                        <div class="w3l-movie-text">
-                            <h6><a href="single.html">The BFG</a></h6>
-                        </div>
-                        <div class="mid-2">
-
-                            <p>2016</p>
-                            <div class="block-stars">
-                                <ul class="w3l-ratings">
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-
-
-                                </ul>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-
-                    </div>
-                    <div class="ribben">
-                        <p>NEW</p>
-                    </div>
-                </div>
-                <div class="col-md-2 w3l-movie-gride-agile">
-                    <a href="single.html" class="hvr-shutter-out-horizontal">
-                        <img src="images/m9.jpg" title="album-name" alt=" " />
-                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-                    </a>
-                    <div class="mid-1">
-                        <div class="w3l-movie-text">
-                            <h6><a href="single.html">Central Intelligence</a></h6>
-                        </div>
-                        <div class="mid-2">
-
-                            <p>2016</p>
-                            <div class="block-stars">
-                                <ul class="w3l-ratings">
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-
-
-                                </ul>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-
-                    </div>
-                    <div class="ribben">
-                        <p>NEW</p>
-                    </div>
-                </div>
-                <div class="col-md-2 w3l-movie-gride-agile">
-                    <a href="single.html" class="hvr-shutter-out-horizontal">
-                        <img src="images/m10.jpg" title="album-name" alt=" " />
-                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-                    </a>
-                    <div class="mid-1">
-                        <div class="w3l-movie-text">
-                            <h6><a href="single.html">Don't Think Twice</a></h6>
-                        </div>
-                        <div class="mid-2">
-
-                            <p>2016</p>
-                            <div class="block-stars">
-                                <ul class="w3l-ratings">
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-
-
-                                </ul>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-
-                    </div>
-                    <div class="ribben">
-                        <p>NEW</p>
-                    </div>
-                </div>
-                <div class="col-md-2 w3l-movie-gride-agile">
-                    <a href="single.html" class="hvr-shutter-out-horizontal">
-                        <img src="images/m11.jpg" title="album-name" alt=" " />
-                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-                    </a>
-                    <div class="mid-1">
-                        <div class="w3l-movie-text">
-                            <h6><a href="single.html">X-Men</a></h6>
-                        </div>
-                        <div class="mid-2">
-
-                            <p>2016</p>
-                            <div class="block-stars">
-                                <ul class="w3l-ratings">
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-
-
-                                </ul>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-
-                    </div>
-                    <div class="ribben">
-                        <p>NEW</p>
-                    </div>
-                </div>
-                <div class="col-md-2 w3l-movie-gride-agile">
-                    <a href="single.html" class="hvr-shutter-out-horizontal">
-                        <img src="images/m12.jpg" title="album-name" alt=" " />
-                        <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-                    </a>
-                    <div class="mid-1">
-                        <div class="w3l-movie-text">
-                            <h6><a href="single.html">Greater</a></h6>
-                        </div>
-                        <div class="mid-2">
-
-                            <p>2016</p>
-                            <div class="block-stars">
-                                <ul class="w3l-ratings">
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-
-
-                                </ul>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-
-                    </div>
-                    <div class="ribben">
-                        <p>NEW</p>
-                    </div>
-                </div>
-
-                <div class="clearfix"> </div>
-            </div>
+            @Html.Action("_PartialRecentlyAdded", "Cinema")
             <!-- //latest-movies -->
 
         </div>

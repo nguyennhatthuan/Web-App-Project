@@ -24,9 +24,11 @@
         [Display(Name = "Mã rạp")]
         public int? RoomId { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập giờ bắt đầu")]
         [Display(Name = "Giờ bắt đầu")]
         public TimeSpan? StartTime { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập ngày chiếu")]
         [Column(TypeName = "date")]
         [Display(Name = "Ngày chiếu")]
         public DateTime? Date { get; set; }

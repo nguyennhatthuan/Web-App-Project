@@ -19,11 +19,13 @@
         [Display(Name = "Mã loại ghế")]
         public int TypeId { get; set; }
 
-        [Required]
-        [StringLength(30)]
+        [Required(ErrorMessage = "Vui lòng nhập loại ghế")]
+        [StringLength(30, ErrorMessage = "Không được quá 30 ký tự")]
         [Display(Name = "Tên loại ghế")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập đơn giá")]
+        [Range(1, int.MaxValue, ErrorMessage = "Số tiền phải lớn hơn 0")]
         [Display(Name = "Đơn giá")]
         public decimal? Price { get; set; }
 

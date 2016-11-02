@@ -25,9 +25,11 @@
         [Display(Name = "Mã suất chiếu")]
         public int? ShowTimeId { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập ngày")]
         [Display(Name = "Ngày đặt vé")]
         public DateTime? BookingDate { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập tình trạng")]
         [Display(Name = "Tình trạng")]
         public bool? Status_ { get; set; }
 

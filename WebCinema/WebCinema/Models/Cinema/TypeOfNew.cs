@@ -18,8 +18,8 @@
         [Display(Name = "Mã loại tin tức")]
         public int TypeId { get; set; }
 
-        [Required]
-        [StringLength(30)]
+        [Required(ErrorMessage = "Vui lòng nhập thể loại tin")]
+        [StringLength(30, ErrorMessage = "Không được quá 30 ký tự")]
         [Display(Name = "Tên loại tin tức")]
         public string Name { get; set; }
 

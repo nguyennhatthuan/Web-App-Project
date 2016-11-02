@@ -14,7 +14,8 @@
             Tickets = new HashSet<Ticket>();
         }
 
-        [StringLength(5)]
+        [StringLength(5, ErrorMessage = "Không được quá 5 ký tự")]
+        [Required(ErrorMessage = "Vui lòng nhập mã ghế")]
         [Display(Name = "Mã ghế")]
         public string SeatId { get; set; }
 
@@ -22,8 +23,12 @@
         public int? TypeId { get; set; }
 
         [Display(Name = "Hàng ghế")]
+        [Required(ErrorMessage = "Vui lòng nhập hàng ghế")]
+        [Range(1, int.MaxValue, ErrorMessage = "Số hàng phải lớn hơn 0")]
         public int Row_ { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập số ghế")]
+        [Range(1, int.MaxValue, ErrorMessage = "Số ghế phải lớn hơn 0")]
         [Display(Name = "Số ghế")]
         public int Number_ { get; set; }
 

@@ -19,7 +19,8 @@
         [Display(Name = "Mã nhóm quyền")]
         public int RGId { get; set; }
 
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "Không được quá 30 ký tự")]
+        [Required(ErrorMessage = "Vui lòng nhập tên nhóm quyền")]
         [Display(Name = "Tên nhóm quyền")]
         public string Name { get; set; }
 

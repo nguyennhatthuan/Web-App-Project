@@ -19,8 +19,8 @@
         [Display(Name = "Mã thể loại")]
         public int TypeId { get; set; }
 
-        [Required]
-        [StringLength(30)]
+        [Required(ErrorMessage = "Vui lòng nhập thể loại phim")]
+        [StringLength(30, ErrorMessage = "Không được quá 30 ký tự")]
         [Display(Name = "Tên thể loại")]
         public string Name { get; set; }
 

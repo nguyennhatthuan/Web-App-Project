@@ -19,9 +19,12 @@
         public int BillId { get; set; }
 
         [Column(TypeName = "date")]
+        [Required(ErrorMessage = "Vui lòng nhập ngày")]
         [Display(Name = "Ngày lập hóa đơn")]
         public DateTime? Date_ { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập số tiền")]
+        [Range(1, int.MaxValue, ErrorMessage = "Giá tiền phải lớn hơn 0")]
         [Display(Name = "Thành tiền")]
         public decimal? Price { get; set; }
 

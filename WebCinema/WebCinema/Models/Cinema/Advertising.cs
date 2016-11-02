@@ -16,6 +16,7 @@
         [Display(Name = "Mã phim")]
         public int? MovieId { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập tình trạng")]
         [Display(Name = "Tình trạng")]
         public bool? Active { get; set; }
 

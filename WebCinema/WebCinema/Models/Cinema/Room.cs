@@ -17,8 +17,8 @@
         [Display(Name = "Mã rạp")]
         public int RoomId { get; set; }
 
-        [Required]
-        [StringLength(50)]
+        [StringLength(50, ErrorMessage = "Không được quá 50 ký tự")]
+        [Required(ErrorMessage = "Vui lòng nhập tên rạp")]
         [Display(Name = "Tên rạp")]
         public string Name { get; set; }
 

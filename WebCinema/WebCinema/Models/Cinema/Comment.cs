@@ -19,10 +19,12 @@
         public int? UserId { get; set; }
 
         [Column(TypeName = "date")]
+        [Required(ErrorMessage = "Vui lòng nhập ngày")]
         [Display(Name = "Ngày bình luận")]
         public DateTime? Date_ { get; set; }
 
         [Column(TypeName = "ntext")]
+        [Required(ErrorMessage = "Vui lòng nhập nội dung")]
         [Display(Name = "Nội dung")]
         public string Content { get; set; }
 

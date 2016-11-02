@@ -16,11 +16,12 @@
         public int? UserId { get; set; }
 
         [Column(TypeName = "ntext")]
-        [Required]
+        [Required(ErrorMessage = "Vui lòng nhập nội dung")]
         [Display(Name = "Nội dung")]
         public string Content { get; set; }
 
         [Display(Name = "Ngày phản hồi")]
+        [Required(ErrorMessage = "Vui lòng nhập ngày")]
         public DateTime? CreatedDate { get; set; }
 
         public virtual UserAccount UserAccount { get; set; }

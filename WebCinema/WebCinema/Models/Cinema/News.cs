@@ -18,10 +18,12 @@
         [Display(Name = "Mã nhân viên")]
         public int? StaffId { get; set; }
 
-        [StringLength(100)]
+        [StringLength(100, ErrorMessage = "Không được quá 100 ký tự")]
+        [Required(ErrorMessage = "Vui lòng nhập tiêu đề")]
         [Display(Name = "Tiêu đề")]
         public string Title { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập nội dung")]
         [Column(TypeName = "ntext")]
         [Display(Name = "Nội dung")]
         public string Content { get; set; }
@@ -31,7 +33,8 @@
         [Display(Name = "Ngày đăng")]
         public DateTime? CreatedDate { get { return dateCreated ?? DateTime.Now; } set { dateCreated = value; } }
 
-        [StringLength(50)]
+        [StringLength(50, ErrorMessage = "Không được quá 50 ký tự")]
+        [Required(ErrorMessage = "Vui lòng nhập tên người đăng")]
         [Display(Name = "Người đăng")]
         public string CreatedBy { get; set; }
 

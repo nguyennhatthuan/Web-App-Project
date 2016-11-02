@@ -21,29 +21,32 @@
         [Display(Name = "Mã User")]
         public int UserId { get; set; }
 
-        [Required]
-        [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng nhập tên user")]
+        [StringLength(50, ErrorMessage = "Không được quá 50 ký tự")]
         [Display(Name = "Tên User")]
         public string UserName { get; set; }
 
-        [Required]
-        [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng nhập mật khẩu")]
+        [StringLength(50, ErrorMessage = "Không được quá 50 ký tự")]
         [Display(Name = "Mật khẩu")]
         public string Password_ { get; set; }
 
-        [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng nhập tên khách hàng")]
+        [StringLength(50, ErrorMessage = "Không được quá 50 ký tự")]
         [Display(Name = "Tên khách hàng")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập tên khách hàng")]
         [Column(TypeName = "date")]
         [Display(Name = "Ngày sinh")]
         public DateTime? Birth { get; set; }
 
-        [StringLength(30)]
+        [Required(ErrorMessage = "Vui lòng nhập email")]
+        [StringLength(30, ErrorMessage = "Không được quá 30 ký tự")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(15)]
+        [Required(ErrorMessage = "Vui lòng nhập số điện thoại")]
+        [StringLength(15, ErrorMessage = "Không được quá 15 ký tự")]
         [Display(Name = "Số điện thoại")]
         public string Phone { get; set; }
 
